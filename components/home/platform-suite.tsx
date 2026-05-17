@@ -78,7 +78,7 @@ const AVAILABLE: AvailableModule[] = [
     index: "04",
     name: "Analytics & Intent",
     icon: BarChart3,
-    tagline: "Lead intent. Objections. Team performance.",
+    tagline: "Know your leads. Track your team.",
     bullets: [
       "Per-lead intent + objection scoring",
       "Competitor mentions ranked + tracked",
