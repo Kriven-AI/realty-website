@@ -36,7 +36,7 @@ export function SiteFooter() {
         <div className="space-y-5">
           <SiteLogo />
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            The AI sales engine for the Indian real estate market — every
+            The AI sales engine for the Indian real estate market. Every
             step of the sale, under one roof.
           </p>
         </div>
