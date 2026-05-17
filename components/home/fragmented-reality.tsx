@@ -23,7 +23,7 @@ const ROWS: { without: string; with: string }[] = [
   },
   {
     without: "Your sales team is a black box",
-    with: "Full visibility on every handoff",
+    with: "Track every salesperson's performance",
   },
 ];
 
@@ -169,7 +169,7 @@ export function FragmentedReality() {
             href="/product"
             className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-brand"
           >
-            See how Kriven closes every step
+            See how Kriven succeeds at every step
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>

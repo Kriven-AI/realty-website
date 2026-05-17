@@ -96,8 +96,9 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
             className="mt-7 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            The AI sales engine for Indian real estate builders. Every call,
-            campaign and follow-up — handled, so you book more site visits.
+            The AI sales engine for the Indian real estate market. Every
+            call, campaign and follow-up — handled, so you book more site
+            visits.
           </motion.p>
 
           {/* CTAs */}

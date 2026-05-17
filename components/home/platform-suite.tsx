@@ -69,7 +69,7 @@ const AVAILABLE: AvailableModule[] = [
     bullets: [
       "Two-way replies, no-show recovery",
       "Auto-sends brochures, maps, RERA docs",
-      "Warm-lead nurture by project + price",
+      "Nurtures warm leads so none go cold",
       "Calls the lead back when they want to talk",
     ],
   },
@@ -78,11 +78,11 @@ const AVAILABLE: AvailableModule[] = [
     index: "04",
     name: "Analytics & Intent",
     icon: BarChart3,
-    tagline: "Lead intent. Objections. Team SLA.",
+    tagline: "Lead intent. Objections. Team performance.",
     bullets: [
       "Per-lead intent + objection scoring",
       "Competitor mentions ranked + tracked",
-      "Sales-team SLA on transferred calls",
+      "Sales-team performance on every transferred call",
       "Drill from chart → lead → transcript",
     ],
   },
