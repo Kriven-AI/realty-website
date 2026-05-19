@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 const NAV_LINKS = [
   { label: "Product", href: "/product" },
   { label: "Modules", href: "/#modules" },
-  { label: "Why Kriven", href: "/#why" },
+  { label: "Why Kriven AI", href: "/#why" },
 ];
 
 /** Pixels to stop short of a section top so it clears the fixed navbar. */

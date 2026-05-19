@@ -66,7 +66,8 @@ export default function ProductPage() {
         description="Every call continues on WhatsApp — the same lead, the same intent, the same context. Kriven sends brochures, handles two-way replies, re-engages no-shows, and warms up cold leads with relevant nudges. The handoff between voice and chat is seamless because they're the same agent, on the same brain."
         features={[
           "Two-way conversational replies on WhatsApp Business",
-          "Auto-sends brochures, floor plans, RERA docs after the call",
+          "Sends brochures, floor plans etc on request",
+          "Follow-ups post site visits",
           "No-show recovery for missed site visits",
           "Warm-lead nurture sequences tuned to project & price band",
           "Hands lead back to inbound queue when they want to talk",

@@ -15,15 +15,15 @@ const ROWS: { without: string; with: string }[] = [
   },
   {
     without: "WhatsApp goes silent, the lead dies",
-    with: "Every lead followed up on WhatsApp",
+    with: "Every lead followed up on WhatsApp too, besides calls",
   },
   {
     without: "No idea why a lead said no",
     with: "Every objection tracked and ranked",
   },
   {
-    without: "Your sales team is a black box",
-    with: "Track every salesperson's performance",
+    without: "Less chance to improve sales team performance",
+    with: "Track and improve sales team performance",
   },
 ];
 
@@ -39,20 +39,22 @@ export function FragmentedReality() {
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         {/* Header */}
-        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+        <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-tint px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
             <ArrowLeftRight className="h-3.5 w-3.5" />
             The Kriven difference
           </span>
-          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-            <span className="text-foreground">
-              Without Kriven, the sale slips away.
-            </span>{" "}
-            <span className="text-brand">With Kriven AI, it closes.</span>
+          <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <span className="block text-foreground">
+              Without us, sales are missed.
+            </span>
+            <span className="block text-brand">
+              With Kriven AI, they’re won.
+            </span>
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
             Same leads. Same projects. Same market. The only thing that
-            changes is whether your enquiries turn into booked site visits.
+            changes is whether your enquiries turn into sales.
           </p>
         </div>
 

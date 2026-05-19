@@ -78,14 +78,14 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-            className="mt-7 max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+            className="mt-7 max-w-6xl text-balance text-2xl font-semibold leading-[1.2] tracking-tight md:text-[1.7rem] lg:text-[2.3rem] xl:text-[2.6rem]"
           >
-            <span className="text-gradient">
-              Every step of the
-              <br className="hidden sm:block" /> real estate sale.
+            <span className="text-gradient md:whitespace-nowrap">
+              One-stop solution for real estate businesses,
             </span>
-            <span className="block text-muted-foreground/80">
-              Your one-stop solution.
+            <br className="hidden md:block" />{" "}
+            <span className="text-muted-foreground">
+              where every moment matters.
             </span>
           </motion.h1>
 
@@ -96,9 +96,7 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
             className="mt-7 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            The AI sales engine for the Indian real estate market. Every
-            call, campaign and follow-up — handled, so you book more site
-            visits.
+            The AI sales engine built for India’s real estate market. Seamlessly manage calls, campaigns, and follow-ups to convert more leads and accelerate sales growth.
           </motion.p>
 
           {/* CTAs */}

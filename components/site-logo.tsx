@@ -17,11 +17,11 @@ export function SiteLogo({
       )}
       aria-label="Kriven AI — Real Estate Intelligence"
     >
-      <span className="text-[18px] font-semibold tracking-tight text-foreground">
+      <span className="text-[21px] font-semibold tracking-tight text-foreground">
         Kriven<span className="text-brand">&nbsp;AI</span>
       </span>
       {showTagline && (
-        <span className="mt-[3px] text-[8px] font-semibold uppercase tracking-[0.2em] text-subtle">
+        <span className="mt-[3px] text-[8.5px] font-semibold uppercase tracking-[0.2em] text-subtle">
           Real Estate Intelligence
         </span>
       )}

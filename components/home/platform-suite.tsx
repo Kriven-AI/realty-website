@@ -45,6 +45,7 @@ const AVAILABLE: AvailableModule[] = [
       "Qualifies in real conversation, not IVR",
       "Books visits directly to your calendar",
       "Transfers to a human on request",
+      "Follow-up post site visits",
     ],
   },
   {
@@ -68,7 +69,7 @@ const AVAILABLE: AvailableModule[] = [
     tagline: "Same thread. Same context.",
     bullets: [
       "Two-way replies, no-show recovery",
-      "Auto-sends brochures, maps, RERA docs",
+      "Sends brochures, floor plans etc on request",
       "Nurtures warm leads so none go cold",
       "Calls the lead back when they want to talk",
     ],

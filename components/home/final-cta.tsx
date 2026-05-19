@@ -20,7 +20,7 @@ export function FinalCTA() {
           transition={{ duration: 0.65, ease: [0.2, 0.8, 0.2, 1] }}
           className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
         >
-          <span className="text-gradient">Run your next sale on Kriven.</span>
+          <span className="text-gradient">Run your next sale on Kriven AI.</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 12 }}

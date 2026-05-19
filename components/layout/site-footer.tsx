@@ -15,7 +15,7 @@ const FOOTER_LINKS: { title: string; items: { label: string; href: string }[] }[
     {
       title: "Company",
       items: [
-        { label: "Why Kriven", href: "/#why" },
+        { label: "Why Kriven AI", href: "/#why" },
         { label: "Book a Demo", href: "/demo" },
         { label: "Customers", href: "/#customers" },
       ],

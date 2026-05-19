@@ -60,11 +60,11 @@ export function Personalization() {
             Personalization engine
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-            <span className="text-foreground">No two leads.</span>{" "}
-            <span className="text-muted-foreground">No same script.</span>
+            <span className="text-foreground">No two leads alike.</span>{" "}
+            <span className="text-muted-foreground">No one script fits all.</span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Kriven reads who each lead is — and adapts three things every
+            Kriven AI identifies who the lead is — and adapts three things every
             time: <span className="text-foreground">when</span> it calls,{" "}
             <span className="text-foreground">what</span> it pitches, and{" "}
             <span className="text-foreground">how</span> it speaks.

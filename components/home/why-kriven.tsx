@@ -34,16 +34,16 @@ export function WhyKriven() {
     >
       <div className="absolute inset-0 dot-pattern opacity-20 mask-radial-fade" />
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-soft">
-            Why Kriven
+            Why Kriven AI
           </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-            <span className="text-foreground">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <span className="block text-foreground">
               The market has many AI dialers.
-            </span>{" "}
-            <span className="text-muted-foreground">
-              This isn&apos;t one of them.
+            </span>
+            <span className="block text-muted-foreground">
+              Kriven AI isn&apos;t one of those.
             </span>
           </h2>
         </div>
