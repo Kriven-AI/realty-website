@@ -48,7 +48,7 @@ const TRANSCRIPT: {
   },
   {
     speaker: "ai",
-    text: "Done sir, site visit book చేశాను. Brochure, map, sales person details అన్నీ WhatsApp లో ఇప్పుడే పంపిస్తున్నాను.",
+    text: "Done sir, site visit book చేశాను. Brochure, floor plan, sales person details అన్నీ WhatsApp లో ఇప్పుడే పంపిస్తున్నాను.",
     lang: "TE + EN",
   },
 ];
