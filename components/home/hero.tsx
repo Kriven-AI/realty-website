@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Glow } from "@/components/ui/glow";
 import { AnimatedDashboard } from "@/components/home/animated-dashboard";
 import { HeroSkyline } from "@/components/home/hero-skyline";
+import { HeroFloatingChips } from "@/components/home/hero-floating-chips";
 
 export function Hero() {
   const dashRef = useRef<HTMLDivElement>(null);
@@ -46,6 +47,15 @@ export function Hero() {
     scrollYProgress,
     [0, 0.8, 1],
     flat ? [1, 1, 1] : [0.92, 1, 1],
+  );
+
+  // Quiet parallax: as the dashboard passes through the viewport, the
+  // skyline drifts down a bit within its parent, so it appears to lag
+  // behind the dashboard — depth, not motion sickness.
+  const skylineY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    flat ? [0, 0] : [0, 64],
   );
 
   return (
@@ -135,7 +145,10 @@ export function Hero() {
           className="relative mx-auto mt-40 max-w-6xl px-2 sm:px-0 lg:mt-48"
         >
           {/* Skyline horizon behind the dashboard */}
-          <HeroSkyline />
+          <HeroSkyline parallaxY={skylineY} />
+
+          {/* Floating data chips around the dashboard */}
+          <HeroFloatingChips />
 
           <div
             className="relative z-10"

@@ -41,11 +41,12 @@ const AVAILABLE: AvailableModule[] = [
     icon: PhoneIncoming,
     tagline: "Picks up every call. Books site visits.",
     bullets: [
-      "Hindi, Telugu, English codemix — switches mid-call",
+      "Telugu, Hindi, English codemix — switches mid-call",
       "Qualifies in real conversation, not IVR",
       "Books visits directly to your calendar",
       "Transfers to a human on request",
-      "Follow-up post site visits",
+      "Missed-call recovery",
+      "Follow-up post site visits"
     ],
   },
   {
@@ -57,8 +58,9 @@ const AVAILABLE: AvailableModule[] = [
     bullets: [
       "Profession-tuned dial windows",
       "Concurrent-call control per campaign",
-      "WhatsApp fallback on no-pickup",
-      "Campaign analytics + auditability",
+      "Smart call retries for no-pickups",
+      "WhatsApp follow-up after failed retries",
+      "Campaign analytics + auditability"
     ],
   },
   {

@@ -1,13 +1,21 @@
 import Image from "next/image";
+import { motion, type MotionValue } from "framer-motion";
 
 /**
  * Hand-drawn skyline sketch placed as a horizon behind the dashboard.
- * The source image is very wide (2400×387 ≈ 6:1). The container holds a
- * tall fixed height so the buildings keep their proper height at every
- * breakpoint — object-cover then crops the WIDTH (sides), showing fewer
- * buildings on mobile rather than a squashed sliver.
+ * The source image is very wide (2400×387 ≈ 6:1). A fixed responsive
+ * height + object-cover keeps the buildings at full height on every
+ * breakpoint and crops the WIDTH instead of squashing the image.
+ *
+ * Accepts an optional `parallaxY` motion value — when scrolled past, the
+ * skyline drifts down slightly within its parent, lagging behind the
+ * dashboard for a quiet depth/parallax effect.
  */
-export function HeroSkyline() {
+export function HeroSkyline({
+  parallaxY,
+}: {
+  parallaxY?: MotionValue<number>;
+}) {
   return (
     <div
       aria-hidden="true"
@@ -18,14 +26,19 @@ export function HeroSkyline() {
           "linear-gradient(to top, black 24%, transparent 100%)",
       }}
     >
-      <Image
-        src="/skyline-sketch.jpeg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="select-none object-cover object-bottom opacity-50 mix-blend-multiply"
-      />
+      <motion.div
+        className="relative h-full w-full"
+        style={parallaxY ? { y: parallaxY } : undefined}
+      >
+        <Image
+          src="/skyline-sketch.jpeg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="select-none object-cover object-bottom opacity-50 mix-blend-multiply"
+        />
+      </motion.div>
     </div>
   );
 }
