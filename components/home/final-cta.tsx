@@ -20,7 +20,9 @@ export function FinalCTA() {
           transition={{ duration: 0.65, ease: [0.2, 0.8, 0.2, 1] }}
           className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
         >
-          <span className="text-gradient">Run your next sale on Kriven AI.</span>
+          <span className="text-gradient">
+            Run your next sale on Kriven <span className="text-brand">AI</span>.
+          </span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -29,8 +31,9 @@ export function FinalCTA() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg"
         >
-          See the platform handle a real call. Get a walkthrough tailored to
-          your project, your inventory, and your buyer profile.
+          Experience a real call in multiple languages. Set up your sales
+          team, launch campaigns, track every lead — and watch your
+          conversions climb.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 12 }}

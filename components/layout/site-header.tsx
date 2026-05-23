@@ -41,18 +41,44 @@ export function SiteHeader() {
   }, [mobileOpen]);
 
   // After landing on the home page with a hash (e.g. navigated from
-  // /product), smooth-scroll to that section once it's in the DOM.
+  // /product or /demo), smooth-scroll to that section once it's in the
+  // DOM. A fixed delay was unreliable when the home page mounted slowly
+  // (heavy hero, animated dashboard, etc) — the target section wasn't
+  // ready yet. So we poll: keep checking until both the section element
+  // exists AND lenis is initialised, then scroll. Capped to ~1.5s so it
+  // never hangs forever.
   useEffect(() => {
     if (pathname !== "/") return;
     const hash = window.location.hash;
     if (!hash) return;
-    const t = setTimeout(() => {
-      lenis?.scrollTo(hash, {
-        offset: SCROLL_OFFSET,
-        duration: SCROLL_DURATION,
-      });
-    }, 120);
-    return () => clearTimeout(t);
+
+    let cancelled = false;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    let attempts = 0;
+    const maxAttempts = 30;
+
+    const tryScroll = () => {
+      if (cancelled) return;
+      const el = document.querySelector(hash);
+      if (el && lenis) {
+        lenis.scrollTo(hash, {
+          offset: SCROLL_OFFSET,
+          duration: SCROLL_DURATION,
+        });
+        return;
+      }
+      if (attempts < maxAttempts) {
+        attempts++;
+        timeoutId = setTimeout(tryScroll, 50);
+      }
+    };
+
+    timeoutId = setTimeout(tryScroll, 100);
+
+    return () => {
+      cancelled = true;
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [pathname, lenis]);
 
   const handleNavClick = (
