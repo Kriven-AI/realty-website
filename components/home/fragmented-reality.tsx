@@ -7,11 +7,15 @@ import { X, Check, ArrowLeftRight, ArrowRight } from "lucide-react";
 const ROWS: { without: string; with: string }[] = [
   {
     without: "Ad clicked — no callback for hours",
-    with: "Every lead called within 60 seconds",
+    with: "Google & Meta ad leads captured - called in 60 seconds",
   },
   {
     without: "Calls missed on nights & weekends",
     with: "Calls answered 24/7, in their language",
+  },
+  {
+    without: "Telecaller campaigns — slow, costly to scale",
+    with: "AI runs every outbound campaign at scale, 24/7",
   },
   {
     without: "WhatsApp goes silent, the lead dies",
@@ -19,7 +23,7 @@ const ROWS: { without: string; with: string }[] = [
   },
   {
     without: "No idea why a lead said no",
-    with: "Every objection tracked and ranked",
+    with: "Track lead interests, objections & competitors",
   },
   {
     without: "Less chance to improve sales team performance",
@@ -105,7 +109,7 @@ export function FragmentedReality() {
 
             <div className="mt-4 border-t border-border-subtle/70 pt-4">
               <p className="text-[13px] font-medium text-muted-foreground">
-                5 vendors · 5 bills · scattered data
+                Multiple vendors · many bills · scattered data
               </p>
             </div>
           </motion.div>

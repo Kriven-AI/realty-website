@@ -15,13 +15,15 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { BRAND_ICONS } from "@/components/icons/brand-icons";
 
+type Bullet = string | { text: string; highlight?: boolean };
+
 type AvailableModule = {
   id: string;
   index: string;
   name: string;
   icon: LucideIcon;
   tagline: string;
-  bullets: string[];
+  bullets: Bullet[];
 };
 
 type ComingModule = {
@@ -41,12 +43,12 @@ const AVAILABLE: AvailableModule[] = [
     icon: PhoneIncoming,
     tagline: "Picks up every call. Books site visits.",
     bullets: [
-      "Telugu, Hindi, English codemix — switches mid-call",
-      "Qualifies in real conversation, not IVR",
-      "Books visits directly to your calendar",
-      "Transfers to a human on request",
+      "Telugu, Hindi, Tamil, Kannada & more. Switches mid-call.",
+      "Qualifies and books site visits",
+      { text: "Highlights your strengths against competitors.", highlight: true },
+      "Warm transfers to a human on request",
       "Missed-call recovery",
-      "Follow-up post site visits"
+      "Updates your CRM with lead details"
     ],
   },
   {
@@ -58,6 +60,7 @@ const AVAILABLE: AvailableModule[] = [
     bullets: [
       "Profession-tuned dial windows",
       "Concurrent-call control per campaign",
+      { text: "Dials 2,000+ leads in a single day", highlight: true },
       "Smart call retries for no-pickups",
       "WhatsApp follow-up after failed retries",
       "Campaign analytics + auditability"
@@ -68,12 +71,13 @@ const AVAILABLE: AvailableModule[] = [
     index: "03",
     name: "WhatsApp Follow-ups",
     icon: MessageCircle,
-    tagline: "Same thread. Same context.",
+    tagline: "Two-way chat. Always on.",
     bullets: [
-      "Two-way replies, no-show recovery",
-      "Sends brochures, floor plans etc on request",
+      "Site-visit confirmations with brochures",
+      "No-show recovery",
       "Nurtures warm leads so none go cold",
-      "Calls the lead back when they want to talk",
+      "Lead can message or call on WhatsApp",
+      "Follow-ups post site visits"
     ],
   },
   {
@@ -83,10 +87,12 @@ const AVAILABLE: AvailableModule[] = [
     icon: BarChart3,
     tagline: "Know your leads. Track your team.",
     bullets: [
-      "Per-lead intent + objection scoring",
+      "Lead profile · interests · objections",
       "Competitor mentions ranked + tracked",
+      { text: "Highly customizable lead qualification metrics", highlight: true },
       "Sales-team performance on every transferred call",
       "Drill from chart → lead → transcript",
+      "Track every lead’s journey from capture to site visit.",
     ],
   },
 ];
@@ -105,10 +111,10 @@ const COMING_SOON: ComingModule[] = [
     id: "crm",
     name: "CRM Integrations",
     icon: Database,
-    tagline: "Plug into the CRMs builders already use.",
+    tagline: "Plug into the CRMs you already use.",
     description:
       "Two-way sync with the leading real estate CRMs — leads in, status out. No spreadsheet exports, no missing context.",
-    chips: ["Salesforce", "Zoho", "HubSpot", "LeadSquared", "Bitrix24"],
+    chips: ["Sell.Do", "Salesforce", "LeadSquared", "Zoho", "HubSpot"],
   },
 ];
 
@@ -175,15 +181,22 @@ export function PlatformSuite() {
 
                   {/* Bullets */}
                   <ul className="mt-4 space-y-2 border-t border-border-subtle pt-4">
-                    {module.bullets.map((bullet) => (
-                      <li
-                        key={bullet}
-                        className="flex items-start gap-2 text-[12.5px] leading-relaxed text-muted-foreground"
-                      >
-                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand/80" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
+                    {module.bullets.map((bullet) => {
+                      const isObj = typeof bullet === "object";
+                      const text = isObj ? bullet.text : bullet;
+                      const isHighlight = isObj && bullet.highlight;
+                      return (
+                        <li
+                          key={text}
+                          className="flex items-start gap-2 text-[12.5px] leading-relaxed text-muted-foreground"
+                        >
+                          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand/80" />
+                          <span style={isHighlight ? { color: "var(--brand)", textShadow: "0 0 gray" } : undefined}>
+                            {text}
+                          </span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </motion.div>
               );
@@ -246,7 +259,7 @@ export function PlatformSuite() {
                           className="inline-flex items-center gap-1.5 rounded-full border border-border-subtle bg-background/60 py-1 pl-1.5 pr-2.5 text-[11px] font-medium text-muted-foreground"
                         >
                           {BrandIcon ? (
-                            <BrandIcon className="h-3.5 w-3.5" />
+                            <BrandIcon className="h-3.5 w-auto" />
                           ) : (
                             <UserPlus className="h-3 w-3 text-brand" />
                           )}
