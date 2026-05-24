@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
+import { AlertCircle, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-type FormState = "idle" | "submitting" | "success";
+type FormState = "idle" | "submitting" | "success" | "error";
 
 export function DemoForm() {
   const [state, setState] = useState<FormState>("idle");
@@ -14,8 +14,35 @@ export function DemoForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setState("submitting");
-    await new Promise((r) => setTimeout(r, 1100));
-    setState("success");
+
+    const formData = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(formData.entries()) as Record<
+      string,
+      string
+    >;
+    // Prepend the +91 country code so the sheet receives a complete number.
+    // Leading apostrophe forces Google Sheets to treat the value as text —
+    // otherwise it sees the "+" and tries to parse "+91 …" as a formula.
+    if (payload.phone) {
+      payload.phone = `'+91 ${payload.phone}`;
+    }
+
+    try {
+      const res = await fetch("/api/demo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const body = (await res.json().catch(() => null)) as
+        | { ok?: boolean }
+        | null;
+      if (!res.ok || !body?.ok) {
+        throw new Error("Submission failed");
+      }
+      setState("success");
+    } catch {
+      setState("error");
+    }
   }
 
   if (state === "success") {
@@ -30,11 +57,11 @@ export function DemoForm() {
           <CheckCircle2 className="h-6 w-6" />
         </span>
         <h3 className="mt-5 text-2xl font-semibold tracking-tight text-foreground">
-          We&apos;ll be in touch within 24 hours.
+          Thanks — your request is in.
         </h3>
         <p className="mt-3 text-sm text-muted-foreground">
-          Our team will reach out to set up a 30-minute walkthrough tailored to
-          your projects and inventory.
+          Our team will review your details and reach out to set up a
+          walkthrough tailored to your projects and inventory.
         </p>
       </motion.div>
     );
@@ -67,13 +94,31 @@ export function DemoForm() {
           placeholder="vikram@sunrisebuilders.in"
           required
         />
-        <Field
-          label="Phone"
-          name="phone"
-          type="tel"
-          placeholder="+91 98•• ••42"
-          required
-        />
+        <div>
+          <label
+            htmlFor="phone"
+            className="mb-2 block text-xs font-medium uppercase tracking-wider text-subtle"
+          >
+            Phone <span className="text-warning">*</span>
+          </label>
+          <div className="flex w-full items-stretch rounded-lg border border-border-subtle bg-background/40 transition-colors focus-within:border-brand/40 focus-within:bg-background/60 focus-within:ring-2 focus-within:ring-brand/20">
+            <span className="flex items-center border-r border-border-subtle px-3.5 text-sm font-medium text-muted-foreground">
+              +91
+            </span>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputMode="numeric"
+              pattern="[6-9][0-9]{9}"
+              maxLength={10}
+              placeholder="98765 43210"
+              required
+              title="Enter a 10-digit Indian mobile number starting with 6, 7, 8 or 9"
+              className="w-full rounded-r-lg bg-transparent px-3.5 py-2.5 text-sm text-foreground placeholder:text-subtle focus:outline-none"
+            />
+          </div>
+        </div>
       </div>
       <Field
         label="Role"
@@ -120,9 +165,26 @@ export function DemoForm() {
         />
       </div>
 
+      {state === "error" && (
+        <div className="flex items-start gap-2.5 rounded-lg border border-warning/30 bg-warning/[0.06] p-3 text-[13px] text-warning">
+          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>
+            Something went wrong sending your details. Please try again, or
+            email us directly at{" "}
+            <a
+              href="mailto:hello@kriven.ai"
+              className="underline underline-offset-2"
+            >
+              hello@kriven.ai
+            </a>
+            .
+          </span>
+        </div>
+      )}
+
       <div className="flex flex-col items-center gap-3 border-t border-border-subtle pt-5 sm:flex-row sm:justify-between">
         <p className="text-xs text-subtle">
-          We&apos;ll respond within 24 hours · No sales spam, ever.
+          Direct response from our team · No sales spam, ever.
         </p>
         <Button
           type="submit"
