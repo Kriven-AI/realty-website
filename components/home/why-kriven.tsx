@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Layers, Brain, Languages } from "lucide-react";
+import { Building2, Layers, Brain, Languages, BadgeCheck } from "lucide-react";
 
 const PILLARS = [
   {
@@ -35,9 +35,10 @@ export function WhyKriven() {
       <div className="absolute inset-0 dot-pattern opacity-20 mask-radial-fade" />
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-soft">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-tint px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
+            <BadgeCheck className="h-3.5 w-3.5" />
             Why Kriven AI
-          </p>
+          </span>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             <span className="block text-foreground">
               The market has many AI dialers.

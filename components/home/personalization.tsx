@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Target, MessageSquare, type LucideIcon } from "lucide-react";
+import {
+  Clock,
+  Target,
+  MessageSquare,
+  UserCircle,
+  type LucideIcon,
+} from "lucide-react";
 
 type Persona = {
   name: string;
@@ -56,9 +62,10 @@ export function Personalization() {
       <div className="absolute inset-0 dot-pattern opacity-30 mask-radial-fade" />
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-tint px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
+            <UserCircle className="h-3.5 w-3.5" />
             Personalization engine
-          </p>
+          </span>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             <span className="text-foreground">No two leads alike.</span>{" "}
             <span className="text-muted-foreground">No one script fits all.</span>

@@ -71,16 +71,20 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
-            className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card py-1.5 pl-1.5 pr-4 text-xs shadow-[0_1px_2px_0_rgba(26,24,23,0.04)]"
           >
-            <span className="inline-flex items-center gap-1 rounded-full bg-brand/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand">
-              <Sparkles className="h-2.5 w-2.5" />
-              New
-            </span>
-            <span className="text-muted-foreground">
-              Outbound Campaign Engine — now live for builders
-            </span>
-            <ArrowRight className="h-3 w-3 text-muted-foreground" />
+            <Link
+              href="/how-it-works"
+              className="group inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card py-1.5 pl-1.5 pr-4 text-xs shadow-[0_1px_2px_0_rgba(26,24,23,0.04)] transition-colors hover:border-brand/30"
+            >
+              <span className="inline-flex items-center gap-1 rounded-full bg-brand/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand">
+                <Sparkles className="h-2.5 w-2.5" />
+                New
+              </span>
+              <span className="text-muted-foreground">
+                Lead Generation is live — we bring leads in too
+              </span>
+              <ArrowRight className="h-3 w-3 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </motion.div>
 
           {/* Headline */}
@@ -88,14 +92,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-            className="mt-7 max-w-6xl text-balance text-2xl font-semibold leading-[1.2] tracking-tight md:text-[1.7rem] lg:text-[2.3rem] xl:text-[2.6rem]"
+            className="mt-7 max-w-6xl text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.25rem] xl:text-[2.7rem]"
           >
-            <span className="text-gradient md:whitespace-nowrap">
-              One-stop solution for real estate businesses,
+            <span className="block text-gradient lg:whitespace-nowrap">
+              Capture and convert every lead into a site visit.
             </span>
-            <br className="hidden md:block" />{" "}
-            <span className="text-muted-foreground">
-              where every moment matters.
+            <span className="block text-muted-foreground">
+              Every channel, any Indian language, 24/7.
             </span>
           </motion.h1>
 
@@ -104,9 +107,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-            className="mt-7 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="mt-7 max-w-4xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            The AI sales engine built for India’s real estate market. Seamlessly manage calls, campaigns, and follow-ups to convert more leads and accelerate sales growth.
+            Kriven AI is the all-in-one sales engine for Indian real estate. We
+            capture every lead, then call or WhatsApp them—qualifying and
+            following up 24/7 until the site visit is booked.
           </motion.p>
 
           {/* CTAs */}
@@ -127,15 +132,15 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Mini proof line */}
+          {/* Secondary value line — quiet, uniform proof copy under the CTAs. */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="mt-6 text-xs text-subtle"
+            className="mt-6 max-w-3xl text-sm text-muted-foreground"
           >
-            Built with love for Indian builders — fluent in Telugu, Hindi,
-            English &amp; 20+ regional languages
+            Our platform replaces your marketing agency, telecallers, and
+            follow-up tools.
           </motion.p>
         </div>
 

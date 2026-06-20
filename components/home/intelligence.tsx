@@ -9,6 +9,7 @@ import {
   Swords,
   UserCheck,
   ArrowUpRight,
+  BarChart3,
 } from "lucide-react";
 
 const CALLER_PROFILES = [
@@ -108,9 +109,10 @@ export function Intelligence() {
       <div className="absolute inset-0 paper-grain opacity-50" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-tint px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
+            <BarChart3 className="h-3.5 w-3.5" />
             Intelligence · not just analytics
-          </p>
+          </span>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             <span className="text-foreground">
               Every call. Every objection. Every competitor.

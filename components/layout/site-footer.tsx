@@ -17,13 +17,12 @@ const FOOTER_LINKS: { title: string; items: { label: string; href: string }[] }[
       items: [
         { label: "Why Kriven AI", href: "/#why" },
         { label: "Book a Demo", href: "/demo" },
-        { label: "Customers", href: "/#customers" },
       ],
     },
     {
       title: "Resources",
       items: [
-        { label: "Roadmap", href: "/#whats-next" },
+        { label: "How it works", href: "/how-it-works" },
         { label: "Contact", href: "/demo" },
       ],
     },

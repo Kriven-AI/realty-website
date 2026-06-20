@@ -10,6 +10,7 @@ import { SiteLogo } from "@/components/site-logo";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
+  { label: "How it works", href: "/how-it-works" },
   { label: "Product", href: "/product" },
   { label: "Modules", href: "/#modules" },
   { label: "Why Kriven AI", href: "/#why" },
