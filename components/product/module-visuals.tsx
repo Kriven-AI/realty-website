@@ -9,6 +9,10 @@ import {
   CheckCircle2,
   TrendingUp,
   Users,
+  Search,
+  MapPin,
+  Sparkles,
+  MonitorPlay,
 } from "lucide-react";
 
 export function InboundVisual() {
@@ -337,6 +341,116 @@ export function AnalyticsVisual() {
           </p>
           <p className="mt-0.5 inline-flex items-center gap-1 font-mono text-xl font-semibold text-success">
             <Users className="h-3.5 w-3.5" /> 96%
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function LeadGenVisual() {
+  const found = [
+    {
+      icon: Search,
+      channel: "Google · “2BHK in Whitefield”",
+      rank: "Rank #1",
+      tint: "brand" as const,
+    },
+    {
+      icon: MapPin,
+      channel: "Google Maps · “near me”",
+      rank: "Top 3",
+      tint: "brand" as const,
+    },
+    {
+      icon: Sparkles,
+      channel: "ChatGPT · “best builders in…”",
+      rank: "Cited",
+      tint: "success" as const,
+    },
+    {
+      icon: MonitorPlay,
+      channel: "Instagram & YouTube · reels",
+      rank: "Trending",
+      tint: "success" as const,
+    },
+  ];
+
+  return (
+    <div className="rounded-2xl border border-border-subtle bg-card p-6 shadow-[0_20px_50px_-20px_rgba(26,24,23,0.12)]">
+      <div className="flex items-center justify-between border-b border-border-subtle pb-4">
+        <div className="flex items-center gap-2.5">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand/15 text-brand-soft">
+            <Search className="h-4 w-4" />
+          </span>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wider text-subtle">
+              Discovery · this month
+            </p>
+            <p className="text-sm font-medium text-foreground">
+              Sunrise Builders
+            </p>
+          </div>
+        </div>
+        <span className="inline-flex items-center gap-1 text-xs font-medium text-success">
+          <TrendingUp className="h-3 w-3" /> +61%
+        </span>
+      </div>
+
+      <div className="mt-5">
+        <p className="mb-3 text-[11px] font-medium uppercase tracking-wider text-subtle">
+          Where buyers find you
+        </p>
+        <div className="space-y-2.5">
+          {found.map((row, i) => {
+            const Icon = row.icon;
+            return (
+              <motion.div
+                key={row.channel}
+                initial={{ opacity: 0, y: 6 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12, duration: 0.4 }}
+                className="flex items-center justify-between rounded-lg border border-border-subtle bg-background/30 px-3 py-2.5"
+              >
+                <span className="flex items-center gap-2.5">
+                  <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-tint text-brand">
+                    <Icon className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="text-[12.5px] text-foreground">
+                    {row.channel}
+                  </span>
+                </span>
+                <span
+                  className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+                    row.tint === "success"
+                      ? "bg-success/15 text-success"
+                      : "bg-brand/15 text-brand-soft"
+                  }`}
+                >
+                  {row.rank}
+                </span>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="mt-5 grid grid-cols-2 gap-2 border-t border-border-subtle pt-4">
+        <div>
+          <p className="text-[9px] uppercase tracking-wider text-subtle">
+            Leads
+          </p>
+          <p className="mt-0.5 font-mono text-xl font-semibold text-foreground">
+            1,240
+          </p>
+        </div>
+        <div>
+          <p className="text-[9px] uppercase tracking-wider text-subtle">
+            Top channel
+          </p>
+          <p className="mt-0.5 font-mono text-xl font-semibold text-success">
+            Google
           </p>
         </div>
       </div>

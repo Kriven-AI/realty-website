@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProductHero } from "@/components/product/product-hero";
 import { ModuleSection } from "@/components/product/module-section";
 import {
+  LeadGenVisual,
   InboundVisual,
   OutboundVisual,
   WhatsAppVisual,
@@ -10,9 +11,9 @@ import {
 import { FinalCTA } from "@/components/home/final-cta";
 
 export const metadata: Metadata = {
-  title: "Product — Inbound, Outbound, WhatsApp, Analytics",
+  title: "Product — Lead Generation, Inbound, Outbound, WhatsApp, Analytics",
   description:
-    "Deep dive into Kriven AI's four modules: Inbound Voice AI, Outbound Campaigns, WhatsApp Follow-ups, and Analytics — all built only for real estate builders.",
+    "Deep dive into Kriven AI's five modules: Lead Generation, Inbound Voice AI, Outbound Campaigns, WhatsApp Follow-ups, and Analytics — all built only for real estate builders.",
 };
 
 export default function ProductPage() {
@@ -21,8 +22,28 @@ export default function ProductPage() {
       <ProductHero />
 
       <ModuleSection
+        id="lead-generation"
+        eyebrow="Module 01 · Lead Generation"
+        title="Lead Generation."
+        tagline="Be everywhere buyers look."
+        description="Buyers discover you long before they ever call. Kriven AI runs your entire top-of-funnel — ranking you on Google search and Maps, getting you cited in AI answers like ChatGPT and Google AI Overviews, running your Meta & Google ad campaigns, and turning your site footage into scroll-stopping reels. Every lead it generates flows straight into the engine for instant pickup."
+        features={[
+          "SEO + content that ranks you on Google for buyer searches",
+          "Rank on Google Maps for ‘near me’ buyers",
+          "AI-search visibility — cited in ChatGPT, Gemini & Google AI Overviews",
+          "Meta & Google ad campaigns, fully designed & managed",
+          "Organic YouTube & Instagram — reels from your own site footage",
+          "Comments → DM → WhatsApp, captured automatically",
+          "Website chatbot widget that qualifies visitors on the spot",
+        ]}
+        replaces="Your marketing agency, SEO consultants, and ad managers."
+        visual={<LeadGenVisual />}
+        reverse
+      />
+
+      <ModuleSection
         id="inbound"
-        eyebrow="Module 01 · Inbound"
+        eyebrow="Module 02 · Inbound"
         title="Inbound Voice AI."
         tagline="Picks up every call. Books site visits."
         description="When a lead calls, Kriven AI answers in their language, qualifies them with a real conversation — not a script — and books the site visit. It handles objections about price, possession, loans, and competing projects with builder-specific context, and escalates to a human salesperson the moment the lead asks."
@@ -41,7 +62,7 @@ export default function ProductPage() {
 
       <ModuleSection
         id="outbound"
-        eyebrow="Module 02 · Outbound"
+        eyebrow="Module 03 · Outbound"
         title="Outbound Campaigns."
         tagline="Calls your lead list. Smart retries."
         description="Upload a CSV or pull from your CRM. Kriven AI dials your leads at the times they're actually free — different windows for IT professionals, business owners, salaried staff, retirees — pitches the project, handles questions, and books site visits. If they don't pick up, it retries on a schedule that respects their profession, then falls back to WhatsApp."
@@ -60,7 +81,7 @@ export default function ProductPage() {
 
       <ModuleSection
         id="whatsapp"
-        eyebrow="Module 03 · WhatsApp"
+        eyebrow="Module 04 · WhatsApp"
         title="WhatsApp Follow-ups."
         tagline="Same thread. Same context."
         description="Every call continues on WhatsApp — the same lead, the same intent, the same context. Kriven AI sends brochures, handles two-way replies, re-engages no-shows, and warms up cold leads with relevant nudges. The handoff between voice and chat is seamless because they're the same agent, on the same brain."
@@ -79,7 +100,7 @@ export default function ProductPage() {
 
       <ModuleSection
         id="analytics"
-        eyebrow="Module 04 · Analytics"
+        eyebrow="Module 05 · Analytics"
         title="Analytics & Intent."
         tagline="Lead intent. Objections. Team performance."
         description="Every call, every WhatsApp thread, every campaign feeds one unified view. See exactly what leads are asking — possession, price, loans, competition — and what's blocking conversion. Track your salespeople on transferred calls. Understand which projects, channels, and pitches actually move buyers to site visit."

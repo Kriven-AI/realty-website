@@ -27,7 +27,7 @@ export function ProductHero() {
           transition={{ delay: 0.1, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
           className="mt-4 text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
         >
-          <span className="text-gradient">Four modules.</span>{" "}
+          <span className="text-gradient">Five modules.</span>{" "}
           <span className="text-muted-foreground">One sales motion.</span>
         </motion.h1>
         <motion.p
