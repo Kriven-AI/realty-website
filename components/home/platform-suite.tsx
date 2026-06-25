@@ -61,7 +61,7 @@ const AVAILABLE: AvailableModule[] = [
   {
     id: "outbound",
     index: "02",
-    name: "Outbound Campaigns",
+    name: "Targeted Outbound Campaigns",
     icon: PhoneOutgoing,
     tagline: "Calls your list. Smart retries.",
     bullets: [
