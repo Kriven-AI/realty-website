@@ -60,7 +60,7 @@ const SOURCES: Source[] = [
       "Strategy tailored to your business",
       "Full campaign launch & management",
       "Creative design & variation testing",
-      "Pixel & tag-manager setup",
+      { text: "Captured leads are called in less than 60 seconds", highlight: true },
       { text: "Budget optimization across channels", highlight: true },
       "Data-driven reporting & insights",
     ],
