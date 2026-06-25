@@ -32,7 +32,7 @@ export default function OpengraphImage() {
           />
         </div>
 
-        {/* Wordmark — Kriven (dark) + AI (coral) */}
+        {/* Wordmark — Kriven AI (dark) + AI (coral) */}
         <div
           style={{
             display: "flex",

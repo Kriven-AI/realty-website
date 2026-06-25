@@ -46,7 +46,7 @@ export function FragmentedReality() {
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-tint px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
             <ArrowLeftRight className="h-3.5 w-3.5" />
-            The Kriven difference
+            The Kriven AI difference
           </span>
           <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             <span className="block text-foreground">
@@ -175,7 +175,7 @@ export function FragmentedReality() {
             href="/product"
             className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-brand"
           >
-            See how Kriven succeeds at every step
+            See how Kriven AI succeeds at every step
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>

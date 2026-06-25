@@ -19,7 +19,7 @@ const WHAT_TO_EXPECT = [
   {
     icon: Clock,
     title: "30 minutes, no slide deck",
-    body: "We open Kriven, hand you a phone, and you talk to the agent yourself. That's the demo.",
+    body: "We open Kriven AI, hand you a phone, and you talk to the agent yourself. That's the demo.",
   },
   {
     icon: PhoneCall,
@@ -52,7 +52,7 @@ export default function DemoPage() {
               Book a demo
             </p>
             <h1 className="mt-3 text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-              <span className="text-gradient">See Kriven handle</span>
+              <span className="text-gradient">See Kriven AI handle</span>
               <br className="hidden sm:block" />
               <span className="text-muted-foreground">a real sales call.</span>
             </h1>

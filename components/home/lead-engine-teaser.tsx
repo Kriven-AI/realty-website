@@ -22,6 +22,7 @@ import {
   ArrowRight,
   ArrowDown,
   Workflow,
+  Search,
   type LucideIcon,
 } from "lucide-react";
 
@@ -40,15 +41,15 @@ type Source = {
 const SOURCES: Source[] = [
   {
     key: "website",
-    title: "Website",
-    icon: Bot,
+    title: "Get Discovered",
+    icon: Search,
     helps: [
       "Custom SEO strategy & keyword research",
       "On-brand content creation & updates",
       "Technical SEO audits & fixes",
       { text: "LLM placement — ChatGPT & Google AI Overviews", highlight: true },
       "High-quality link building",
-      "Local & programmatic SEO",
+      { text: "Rank on Google Maps for ‘near me’ buyers", highlight: true },
     ],
   },
   {
@@ -101,7 +102,7 @@ const SOURCES: Source[] = [
 const QUALIFY_CHANNELS = [
   { key: "whatsapp", label: "WhatsApp", icon: MessageCircle },
   { key: "voice", label: "Voice AI · Call", icon: PhoneCall },
-  { key: "chatbot", label: "Website chatbot widget", icon: Bot },
+  { key: "chatbot", label: "Interactive Chatbot · Website", icon: Bot },
 ];
 
 /* ---------------- Sneha — the animated one-lead example ---------------- */
@@ -118,7 +119,7 @@ const FLOW: FlowNode[] = [
 
 const SNEHA = [
   "11:04 PM · Sneha taps your Instagram reel",
-  "11:05 PM · Kriven replies on WhatsApp — in her own language",
+  "11:05 PM · Kriven AI replies on WhatsApp — in her own language",
   "11:08 PM · 3BHK · ₹80L · ready to buy → 🔥 HOT lead",
   "11:10 PM · Site visit booked — Saturday 4 PM ✅",
   "★ She shows up. Your team closes the sale.",

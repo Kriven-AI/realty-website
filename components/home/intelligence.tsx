@@ -122,7 +122,7 @@ export function Intelligence() {
             </span>
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Other dashboards show you call counts. Kriven shows you{" "}
+            Other dashboards show you call counts. Kriven AI shows you{" "}
             <span className="text-foreground">why</span> leads are buying —
             and <span className="text-foreground">why they aren&apos;t</span>.
           </p>

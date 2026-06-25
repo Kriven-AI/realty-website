@@ -123,7 +123,7 @@ export function Personalization() {
                 </div>
               </div>
 
-              {/* How Kriven adapts — same 3 rows on every card */}
+              {/* How Kriven AI adapts — same 3 rows on every card */}
               <div className="mt-5 space-y-4 border-t border-border-subtle pt-5">
                 {DIMENSIONS.map((dim) => {
                   const Icon = dim.icon;

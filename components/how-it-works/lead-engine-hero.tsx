@@ -36,7 +36,7 @@ export function LeadEngineHero() {
           transition={{ delay: 0.16, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
         >
-          From the first tap on an ad to a booked site visit, Kriven runs the
+          From the first tap on an ad to a booked site visit, Kriven AI runs the
           whole journey — bringing leads in, then handling every one across
           chatbot, WhatsApp and voice AI. One engine, every Indian language,
           24/7.

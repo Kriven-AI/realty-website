@@ -27,15 +27,12 @@ type Channel = {
 };
 
 const CHANNELS: Channel[] = [
-  { icon: Search, label: "Google & SEO", sub: "High-intent search", door: "web" },
+  { icon: Search, label: "Google Search & Maps", sub: "High-intent + ‘near me’", door: "web" },
   { icon: Sparkles, label: "AI search", sub: "ChatGPT · Gemini · Perplexity", door: "web" },
   { icon: Megaphone, label: "Meta & Google ads", sub: "Click-to-WhatsApp", door: "whatsapp" },
   { icon: Camera, label: "Instagram", sub: "Posts · reels · comments", door: "whatsapp" },
   { icon: MonitorPlay, label: "YouTube", sub: "Videos · comments", door: "whatsapp" },
-  { icon: Building2, label: "Property portals", sub: "99acres · Magicbricks", door: "whatsapp" },
-  { icon: QrCode, label: "Offline & QR", sub: "Hoardings · missed-call", door: "whatsapp" },
-  { icon: Users, label: "Referrals", sub: "Past buyers", door: "whatsapp" },
-  { icon: Tv, label: "Connected TV", sub: "JioHotstar · influencers", door: "whatsapp" },
+  { icon: Building2, label: "Property portals", sub: "99acres · Magicbricks", door: "whatsapp" }
 ];
 
 const fadeUp = {
@@ -61,7 +58,7 @@ export function AttractChannels() {
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             We run your marketing across every channel that matters in India —
             and no matter where a lead discovers you, they flow into one of
-            three channels where Kriven captures and qualifies them.
+            three channels where Kriven AI captures and qualifies them.
           </p>
         </div>
 
@@ -123,13 +120,13 @@ export function AttractChannels() {
             icon={MessageCircle}
             tone="success"
             title="WhatsApp"
-            line="Ads, posts, reels — even comments — route into WhatsApp, where Kriven greets and qualifies in their language."
+            line="Ads, posts, reels — even comments — route into WhatsApp, where Kriven AI greets and qualifies in their language."
           />
           <DoorCard
             icon={PhoneCall}
             tone="brand"
             title="Voice AI · Call"
-            line="Kriven calls every new lead within 60 seconds — and picks up the moment they call you back."
+            line="Kriven AI calls every new lead within 60 seconds — and picks up the moment they call you back."
           />
           <DoorCard
             icon={Bot}

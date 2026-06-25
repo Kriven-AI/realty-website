@@ -25,7 +25,7 @@ export default function ProductPage() {
         eyebrow="Module 01 · Inbound"
         title="Inbound Voice AI."
         tagline="Picks up every call. Books site visits."
-        description="When a lead calls, Kriven answers in their language, qualifies them with a real conversation — not a script — and books the site visit. It handles objections about price, possession, loans, and competing projects with builder-specific context, and escalates to a human salesperson the moment the lead asks."
+        description="When a lead calls, Kriven AI answers in their language, qualifies them with a real conversation — not a script — and books the site visit. It handles objections about price, possession, loans, and competing projects with builder-specific context, and escalates to a human salesperson the moment the lead asks."
         features={[
           "Picks up 24/7 — including weekends, late evenings, peak hours",
           "Qualifies with real conversation, not a scripted IVR",
@@ -44,7 +44,7 @@ export default function ProductPage() {
         eyebrow="Module 02 · Outbound"
         title="Outbound Campaigns."
         tagline="Calls your lead list. Smart retries."
-        description="Upload a CSV or pull from your CRM. Kriven dials your leads at the times they're actually free — different windows for IT professionals, business owners, salaried staff, retirees — pitches the project, handles questions, and books site visits. If they don't pick up, it retries on a schedule that respects their profession, then falls back to WhatsApp."
+        description="Upload a CSV or pull from your CRM. Kriven AI dials your leads at the times they're actually free — different windows for IT professionals, business owners, salaried staff, retirees — pitches the project, handles questions, and books site visits. If they don't pick up, it retries on a schedule that respects their profession, then falls back to WhatsApp."
         features={[
           "Smart retry windows by lead profession & time-of-day",
           "Concurrent calls capped per builder & per campaign",
@@ -63,7 +63,7 @@ export default function ProductPage() {
         eyebrow="Module 03 · WhatsApp"
         title="WhatsApp Follow-ups."
         tagline="Same thread. Same context."
-        description="Every call continues on WhatsApp — the same lead, the same intent, the same context. Kriven sends brochures, handles two-way replies, re-engages no-shows, and warms up cold leads with relevant nudges. The handoff between voice and chat is seamless because they're the same agent, on the same brain."
+        description="Every call continues on WhatsApp — the same lead, the same intent, the same context. Kriven AI sends brochures, handles two-way replies, re-engages no-shows, and warms up cold leads with relevant nudges. The handoff between voice and chat is seamless because they're the same agent, on the same brain."
         features={[
           "Two-way conversational replies on WhatsApp Business",
           "Sends brochures, floor plans etc on request",
