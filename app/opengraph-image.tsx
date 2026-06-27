@@ -102,7 +102,7 @@ export default function OpengraphImage() {
               background: "#d9583e",
             }}
           />
-          realty-website.vercel.app
+          kriven.ai
         </div>
       </div>
     ),

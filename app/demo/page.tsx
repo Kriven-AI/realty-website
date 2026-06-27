@@ -10,6 +10,7 @@ import { DemoForm } from "@/components/demo/demo-form";
 import { Glow } from "@/components/ui/glow";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/demo" },
   title: "Book a demo",
   description:
     "Get a tailored 30-minute walkthrough — live agent on a real call, no slide deck.",

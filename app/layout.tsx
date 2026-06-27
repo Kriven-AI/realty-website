@@ -4,6 +4,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { StructuredData } from "@/components/structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,9 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://realty-website.vercel.app"),
+  metadataBase: new URL("https://kriven.ai"),
+  alternates: { canonical: "/" },
   title: {
-    default: "Kriven AI — Every step of the real estate sale. One platform.",
+    default: "Kriven AI — AI Sales Engine for Indian Real Estate",
     template: "%s · Kriven AI",
   },
   description:
@@ -38,8 +40,10 @@ export const metadata: Metadata = {
     title: "Kriven AI — Every step of the real estate sale.",
     description:
       "The AI sales engine for Indian real estate builders — inbound calls, outbound campaigns, WhatsApp follow-ups and analytics, in one place.",
+    url: "https://kriven.ai",
     type: "website",
     siteName: "Kriven AI",
+    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
@@ -60,6 +64,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <body className="relative min-h-screen bg-background font-sans text-foreground">
+        <StructuredData />
         <SmoothScroll>
           <SiteHeader />
           <main className="relative">{children}</main>

@@ -11,7 +11,8 @@ import {
 import { FinalCTA } from "@/components/home/final-cta";
 
 export const metadata: Metadata = {
-  title: "Product — Lead Generation, Inbound, Outbound, WhatsApp, Analytics",
+  alternates: { canonical: "/product" },
+  title: "Product — AI Sales Modules for Real Estate",
   description:
     "Deep dive into Kriven AI's five modules: Lead Generation, Inbound Voice AI, Outbound Campaigns, WhatsApp Follow-ups, and Analytics — all built only for real estate builders.",
 };
