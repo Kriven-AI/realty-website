@@ -96,7 +96,7 @@ export function Hero() {
             className="mt-7 max-w-6xl text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.25rem] xl:text-[2.7rem]"
           >
             <span className="block text-gradient lg:whitespace-nowrap">
-              Capture and convert every lead into a site visit.
+              Never miss a lead. Turn more into site visits.
             </span>
             <span className="block text-muted-foreground">
               Every channel, any Indian language, 24/7.

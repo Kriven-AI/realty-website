@@ -69,7 +69,7 @@ const AVAILABLE: AvailableModule[] = [
       "Concurrent-call control per campaign",
       { text: "Dials 2,000+ leads in a single day", highlight: true },
       "Smart call retries for no-pickups",
-      "WhatsApp follow-up after failed retries",
+      { text: "WhatsApp follow-up after failed retries", highlight: true },
       "Campaign analytics + auditability"
     ],
   },
