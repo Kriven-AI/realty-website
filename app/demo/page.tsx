@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/demo" },
   title: "Book a demo",
   description:
-    "Get a tailored 30-minute walkthrough — live agent on a real call, no slide deck.",
+    "Book a free Kriven AI demo — watch our voice AI handle a real sales call, qualify a lead, and book a site visit in their language. 30 minutes, no slide deck.",
 };
 
 const WHAT_TO_EXPECT = [

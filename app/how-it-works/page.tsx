@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/how-it-works" },
   title: "How it works — The Lead Engine",
   description:
-    "From the first ad-tap to a booked site visit, Kriven AI runs the whole journey — bringing buyers in across every channel, then handling every one across chatbot, WhatsApp and voice AI. One engine, every Indian language, 24/7.",
+    "Kriven AI runs the whole journey — from the first ad-click to a booked site visit, across chatbot, WhatsApp and voice AI, in every Indian language.",
 };
 
 export default function HowItWorksPage() {

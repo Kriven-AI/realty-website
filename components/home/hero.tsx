@@ -87,10 +87,11 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline — no opacity fade: this is the LCP element, so it
+              must paint immediately. A subtle slide keeps the entrance. */}
           <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 16 }}
+            animate={{ y: 0 }}
             transition={{ delay: 0.1, duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
             className="mt-7 max-w-6xl text-3xl font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-[2.25rem] xl:text-[2.7rem]"
           >

@@ -42,9 +42,9 @@ export function SiteFooter() {
 
         {FOOTER_LINKS.map((column) => (
           <div key={column.title} className="space-y-4">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-subtle">
+            <h2 className="text-xs font-semibold uppercase tracking-wider text-subtle">
               {column.title}
-            </h4>
+            </h2>
             <ul className="space-y-2.5">
               {column.items.map((item) => (
                 <li key={item.href}>
@@ -65,14 +65,11 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-subtle md:flex-row lg:px-8">
           <p>© {new Date().getFullYear()} Kriven AI. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <Link href="#" className="hover:text-foreground transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-foreground transition-colors"
+            >
               Privacy
-            </Link>
-            <Link href="#" className="hover:text-foreground transition-colors">
-              Terms
-            </Link>
-            <Link href="#" className="hover:text-foreground transition-colors">
-              Security
             </Link>
           </div>
         </div>
