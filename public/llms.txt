@@ -1,0 +1,37 @@
+# Kriven AI
+
+> Kriven AI is the AI sales engine for Indian real estate builders. It generates leads across every channel (Google, Google Maps, AI search, Meta and Google ads, organic Instagram and YouTube, a website chatbot), then calls, WhatsApps, qualifies and follows up with every lead — in any Indian language, 24/7, in under 60 seconds — until a site visit is booked. It replaces a builder's scattered stack of marketing agency, telecallers, WhatsApp tools and CRM with one platform, and turns every conversation into analytics that reveal who is calling, what buyers want, which competitors keep coming up, and why leads convert or don't. The one metric it optimises: more booked site visits at a lower cost per visit.
+
+## Core pages
+- [Kriven AI — AI Sales Engine for Indian Real Estate](https://kriven.ai/): Homepage and overview.
+- [How it works — The Lead Engine](https://kriven.ai/how-it-works): The end-to-end funnel from first ad-click to a booked site visit.
+- [Product — AI sales modules](https://kriven.ai/product): The five modules — Lead Generation, Inbound Voice AI, Outbound Campaigns, WhatsApp Follow-ups, and Analytics.
+- [Book a demo](https://kriven.ai/demo): Watch a real AI sales call and book a walkthrough.
+
+## Solutions
+- [Real Estate Lead Generation Platform](https://kriven.ai/solutions/lead-generation): Bring buyers in from search, maps, AI answers, ads and social — then work every lead until it books.
+- [Voice AI Calling for Real Estate](https://kriven.ai/solutions/ai-voice-calling): Inbound and outbound calling in under 60 seconds, in any Indian language, 24/7.
+- [WhatsApp Automation & Follow-up](https://kriven.ai/solutions/whatsapp-automation): Instant replies, brochures, no-show recovery and nurture until the site visit is booked.
+- [Real Estate Lead Management](https://kriven.ai/solutions/lead-management): Every lead from every channel, captured, tracked, scored and worked automatically.
+- [Real Estate Sales Analytics & Lead Intelligence](https://kriven.ai/solutions/analytics): See who's calling, what buyers want, which competitors come up, and why leads convert.
+
+## Blog — guides, playbooks and data
+- [Why Your Real Estate Leads Aren't Converting Into Site Visits](https://kriven.ai/blog/why-real-estate-leads-dont-convert-into-site-visits): It's usually a speed and follow-up gap, not lead quality.
+- [The First 60 Minutes of a Real Estate Lead](https://kriven.ai/blog/the-first-60-minutes-of-a-real-estate-lead): The speed-to-lead data — respond within 5 minutes, ideally under 60 seconds.
+- [Your Reel Got 200 Comments Asking "Price?"](https://kriven.ai/blog/turn-instagram-reel-comments-into-real-estate-leads): Turning organic Instagram/YouTube comments into leads.
+- [AI Voice Agent vs. a Telecalling Team](https://kriven.ai/blog/ai-voice-agent-vs-telecalling-team-real-estate): An honest cost and performance comparison for real estate.
+- [Best AI Tools for Real Estate Lead Management in India (2026)](https://kriven.ai/blog/best-ai-tools-real-estate-lead-management-india): An honest roundup (Sell.Do, LeadSquared, PropFlo, Zoho, Kriven AI).
+- [WhatsApp Follow-Up Templates for Real Estate](https://kriven.ai/blog/whatsapp-follow-up-templates-for-real-estate): 12 copy-paste WhatsApp templates for every stage.
+- [How Much Indian Builders Lose to Missed Calls, Nights & Weekends](https://kriven.ai/blog/how-much-builders-lose-to-missed-calls): The real cost of unanswered leads.
+- [One AI Sales Engine vs. Five Separate Vendors](https://kriven.ai/blog/one-ai-sales-engine-vs-five-vendors): The real cost of a fragmented sales stack.
+- [Your CRM Isn't Booking Site Visits — CRM vs. Sales Engine](https://kriven.ai/blog/crm-vs-sales-engine-real-estate): System of record vs system of action.
+- [40–60% of Booked Site Visits Never Happen — Cut No-Shows](https://kriven.ai/blog/reduce-real-estate-site-visit-no-shows): A WhatsApp playbook to reduce no-shows.
+- [Buyers Are Asking ChatGPT "Best Builder in [City]"](https://kriven.ai/blog/buyers-ask-chatgpt-best-builder-geo): How builders show up in AI answers (GEO).
+- [The Codemix Problem](https://kriven.ai/blog/codemix-problem-voice-bots-indian-real-estate): Why generic voice bots fail on Hindi/Telugu/English mixed calls.
+- [You Know Your Leads Said No. Do You Know Why?](https://kriven.ai/blog/why-real-estate-leads-say-no-analytics): Turning sales conversations into decisions.
+
+## About
+- Audience: Indian real estate builders and developers.
+- Category: AI sales engine (lead generation + voice AI + WhatsApp + lead management + analytics) for real estate.
+- Languages: Hindi, Telugu, Tamil, Kannada, Marathi, English and natural code-mix.
+- Contact: hello@kriven.ai

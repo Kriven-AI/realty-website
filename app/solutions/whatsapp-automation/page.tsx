@@ -5,6 +5,7 @@ import { Capabilities } from "@/components/solutions/whatsapp-automation/capabil
 import { BuiltForRealEstate } from "@/components/solutions/whatsapp-automation/built-for-real-estate";
 import { Faq } from "@/components/solutions/whatsapp-automation/faq";
 import { FinalCTA } from "@/components/home/final-cta";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions/whatsapp-automation" },
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
     description:
       "Instant replies, brochures, no-show recovery and persistent nurture on WhatsApp — a real two-way conversation that follows up every lead until the site visit is booked.",
     url: "https://kriven.ai/solutions/whatsapp-automation",
+    images: ["/og?title=" + encodeURIComponent("WhatsApp Automation & Follow-up for Real Estate") + "&category=Solutions"],
   },
 };
 
 export default function WhatsAppAutomationPage() {
   return (
     <>
+      <Breadcrumbs schemaOnly items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Product", item: "https://kriven.ai/product" }, { name: "WhatsApp Automation", item: "https://kriven.ai/solutions/whatsapp-automation" }]} />
       <Hero />
       <TheGap />
       <Capabilities />

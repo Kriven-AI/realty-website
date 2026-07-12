@@ -5,6 +5,7 @@ import { Capabilities } from "@/components/solutions/lead-generation/capabilitie
 import { BuiltForRealEstate } from "@/components/solutions/lead-generation/built-for-real-estate";
 import { Faq } from "@/components/solutions/lead-generation/faq";
 import { FinalCTA } from "@/components/home/final-cta";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions/lead-generation" },
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
     description:
       "Generate leads across Google, Maps, AI search, ads and social — then convert them with voice and WhatsApp until the site visit is booked. Not just more leads: more site visits.",
     url: "https://kriven.ai/solutions/lead-generation",
+    images: ["/og?title=" + encodeURIComponent("Real Estate Lead Generation Platform") + "&category=Solutions"],
   },
 };
 
 export default function LeadGenerationPage() {
   return (
     <>
+      <Breadcrumbs schemaOnly items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Product", item: "https://kriven.ai/product" }, { name: "Lead Generation", item: "https://kriven.ai/solutions/lead-generation" }]} />
       <Hero />
       <TheReframe />
       <Capabilities />

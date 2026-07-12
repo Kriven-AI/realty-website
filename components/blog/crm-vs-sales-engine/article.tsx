@@ -50,7 +50,7 @@ function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
 
 export function Article() {
   return (
-    <article className="relative pt-32 pb-8 lg:pt-40">
+    <article className="relative pt-6 pb-8 lg:pt-8">
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand-soft">
           {POST.category}

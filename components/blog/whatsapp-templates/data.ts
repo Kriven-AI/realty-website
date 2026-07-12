@@ -11,6 +11,7 @@ export const POST = {
   dateModified: "2026-07-11",
   readTime: "8 min read",
   dateDisplay: "July 2026",
+  category: "WhatsApp",
 };
 
 export type Template = {

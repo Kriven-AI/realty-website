@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Article } from "@/components/blog/one-engine-vs-five/article";
 import { POST, FAQS } from "@/components/blog/one-engine-vs-five/data";
 import { FinalCTA } from "@/components/home/final-cta";
+import { RelatedPosts } from "@/components/blog/related-posts";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 const URL = `https://kriven.ai/blog/${POST.slug}`;
 
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
     url: URL,
     type: "article",
     publishedTime: POST.datePublished,
+    images: ["/og?title=" + encodeURIComponent(POST.title) + "&category=" + encodeURIComponent(POST.category)],
   },
 };
 
@@ -55,7 +58,9 @@ export default function OneEngineVsFivePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <Breadcrumbs items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Blog", item: "https://kriven.ai/blog" }, { name: POST.title, item: URL }]} />
       <Article />
+      <RelatedPosts slug={POST.slug} />
       <FinalCTA />
     </>
   );

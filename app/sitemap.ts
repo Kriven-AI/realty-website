@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "", priority: 1 },
     { path: "/how-it-works", priority: 0.9 },
     { path: "/product", priority: 0.9 },
+    { path: "/about", priority: 0.5 },
     { path: "/solutions/lead-generation", priority: 0.8 },
     { path: "/solutions/ai-voice-calling", priority: 0.8 },
     { path: "/solutions/whatsapp-automation", priority: 0.8 },

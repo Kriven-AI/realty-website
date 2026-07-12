@@ -5,6 +5,7 @@ import { Capabilities } from "@/components/solutions/lead-management/capabilitie
 import { BuiltForRealEstate } from "@/components/solutions/lead-management/built-for-real-estate";
 import { Faq } from "@/components/solutions/lead-management/faq";
 import { FinalCTA } from "@/components/home/final-cta";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions/lead-management" },
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
     description:
       "Every channel in one place, every lead tracked and scored, and worked automatically with calls and WhatsApp until the site visit is booked. A sales engine, not a filing cabinet.",
     url: "https://kriven.ai/solutions/lead-management",
+    images: ["/og?title=" + encodeURIComponent("Real Estate Lead Management Software") + "&category=Solutions"],
   },
 };
 
 export default function LeadManagementPage() {
   return (
     <>
+      <Breadcrumbs schemaOnly items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Product", item: "https://kriven.ai/product" }, { name: "Lead Management", item: "https://kriven.ai/solutions/lead-management" }]} />
       <Hero />
       <TheGraveyard />
       <Capabilities />

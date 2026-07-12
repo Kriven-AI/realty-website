@@ -5,6 +5,7 @@ import { Capabilities } from "@/components/solutions/analytics/capabilities";
 import { BuiltForRealEstate } from "@/components/solutions/analytics/built-for-real-estate";
 import { Faq } from "@/components/solutions/analytics/faq";
 import { FinalCTA } from "@/components/home/final-cta";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions/analytics" },
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
     description:
       "Understand who your buyers really are, what they want, and what's stopping them — from real calls and chats — so you make decisions that grow your sales.",
     url: "https://kriven.ai/solutions/analytics",
+    images: ["/og?title=" + encodeURIComponent("Real Estate Sales Analytics & Lead Intelligence") + "&category=Solutions"],
   },
 };
 
 export default function AnalyticsPage() {
   return (
     <>
+      <Breadcrumbs schemaOnly items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Product", item: "https://kriven.ai/product" }, { name: "Analytics & Insights", item: "https://kriven.ai/solutions/analytics" }]} />
       <Hero />
       <TheBlindSpot />
       <Capabilities />

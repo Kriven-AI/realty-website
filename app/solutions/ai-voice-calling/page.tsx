@@ -5,6 +5,7 @@ import { Capabilities } from "@/components/solutions/ai-voice-calling/capabiliti
 import { BuiltForRealEstate } from "@/components/solutions/ai-voice-calling/built-for-real-estate";
 import { Faq } from "@/components/solutions/ai-voice-calling/faq";
 import { FinalCTA } from "@/components/home/final-cta";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions/ai-voice-calling" },
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
     description:
       "Call every cold lead in under 60 seconds and work your outbound lists 24/7, in any Indian language. Qualify buyers and book more site visits.",
     url: "https://kriven.ai/solutions/ai-voice-calling",
+    images: ["/og?title=" + encodeURIComponent("Voice AI Calling for Real Estate") + "&category=Solutions"],
   },
 };
 
 export default function AIVoiceCallingPage() {
   return (
     <>
+      <Breadcrumbs schemaOnly items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Product", item: "https://kriven.ai/product" }, { name: "AI Voice Calling", item: "https://kriven.ai/solutions/ai-voice-calling" }]} />
       <Hero />
       <TheCost />
       <Capabilities />
