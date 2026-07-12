@@ -115,7 +115,7 @@ const LEAD_GEN = {
     "Meta & Google ad campaigns, fully managed",
     "Scroll-stopping reels from your own site footage",
     "Website chatbot that qualifies on the spot",
-    { text: "Comments → DM → WhatsApp, automatically", highlight: true },
+    { text: "Comments → auto-DM → qualified on the spot", highlight: true },
   ] as Bullet[],
   channels: [
     { label: "Google", icon: Search },

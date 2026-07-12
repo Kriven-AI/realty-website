@@ -53,13 +53,13 @@ export const STEPS: Step[] = [
   },
   {
     n: "03",
-    title: "Move the thread to WhatsApp",
-    body: "WhatsApp is where Indian buyers actually convert. Continue the conversation there, send the brochure and location, and keep the thread alive across days.",
+    title: "Qualify right there in the DM",
+    body: "No need to move them anywhere. Kriven's AI agent qualifies the buyer inside the Instagram DM itself — budget, location, timeline and any questions, in their own language.",
   },
   {
     n: "04",
-    title: "Qualify and book the site visit",
-    body: "Budget, location, timeline — a quick qualifying chat, then book the visit. A public 'Price?' has become a buyer standing on your site.",
+    title: "Book the site visit",
+    body: "Once they're qualified, book the visit and hand them to your sales team — a public 'Price?' comment has become a buyer standing on your site, without ever leaving Instagram.",
   },
 ];
 
@@ -68,11 +68,11 @@ export type Faq = { q: string; a: string };
 export const FAQS: Faq[] = [
   {
     q: "How do you turn Instagram comments into real estate leads?",
-    a: "Reply to the comment publicly, then DM the commenter within minutes, move the conversation to WhatsApp, qualify them and book a site visit. The key is speed and consistency — a 'price?' comment is a warm lead only if you actually reach the person before they scroll on.",
+    a: "Reply to the comment publicly, auto-DM the commenter within seconds, and qualify them right in the Instagram DM — then book a site visit. The key is speed and consistency — a 'price?' comment is a warm lead only if you actually reach the person before they scroll on.",
   },
   {
     q: "Should you reply to “price” comments publicly or in a DM?",
-    a: "Both. A short public reply signals responsiveness to everyone watching, but the real conversation — pricing, floor plans, booking — belongs in a DM and then WhatsApp, where you can qualify the buyer privately.",
+    a: "Both. A short public reply signals responsiveness to everyone watching, but the real conversation — pricing, floor plans, booking — belongs in the DM, where Kriven can qualify the buyer privately. For an organic post there's no need to move them to WhatsApp — it all happens right in Instagram.",
   },
   {
     q: "What is Instagram comment-to-DM automation?",
@@ -80,6 +80,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How do real estate builders generate leads from reels?",
-    a: "By posting reels that trigger comments (project walkthroughs, price reveals, location highlights), then capturing every commenter — replying, DMing and moving them to WhatsApp fast. The reel creates demand; the follow-up turns it into site visits.",
+    a: "By posting reels that trigger comments (project walkthroughs, price reveals, location highlights), then capturing every commenter — replying, auto-DMing and qualifying them right in the DM, fast. The reel creates demand; the follow-up turns it into site visits.",
   },
 ];

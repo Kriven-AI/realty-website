@@ -122,9 +122,10 @@ export function Article() {
         </section>
 
         <KrivenFit>
-          Capturing every commenter, replying in seconds and moving them to
-          WhatsApp is exactly what Kriven automates — so a viral reel turns into
-          booked site visits instead of a pile of ignored “Price?” comments.
+          Capturing every commenter, auto-replying in seconds and qualifying
+          them right in the Instagram DM is exactly what Kriven automates — so a
+          viral reel turns into booked site visits instead of a pile of ignored
+          “Price?” comments.
         </KrivenFit>
 
         {/* The play */}
@@ -172,15 +173,9 @@ export function Article() {
                 lead generation
               </Link>{" "}
               captures the buyers who comment or DM on your reels, replies in
-              seconds, and moves them into a{" "}
-              <Link
-                href="/solutions/whatsapp-automation"
-                className="font-medium text-brand transition-colors hover:text-brand-soft"
-              >
-                WhatsApp conversation
-              </Link>{" "}
-              that qualifies them and books the site visit — so a viral reel turns
-              into booked visits, not just a nice view count.
+              seconds, and qualifies them right in the Instagram DM — then books
+              the site visit. So a viral reel turns into booked visits, not just
+              a nice view count.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button asChild variant="brand" size="lg">

@@ -15,6 +15,7 @@ import {
   PhoneCall,
   MessageCircle,
   ArrowDown,
+  Send,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,14 +24,14 @@ type Channel = {
   label: string;
   sub: string;
   /** Which door this channel mostly flows into. */
-  door: "web" | "whatsapp";
+  door: "web" | "whatsapp" | "dm";
 };
 
 const CHANNELS: Channel[] = [
   { icon: Search, label: "Google Search & Maps", sub: "High-intent + ‘near me’", door: "web" },
   { icon: Sparkles, label: "AI search", sub: "ChatGPT · Gemini · Perplexity", door: "web" },
   { icon: Megaphone, label: "Meta & Google ads", sub: "Click-to-WhatsApp", door: "whatsapp" },
-  { icon: Camera, label: "Instagram", sub: "Posts · reels · comments", door: "whatsapp" },
+  { icon: Camera, label: "Instagram", sub: "Posts · reels · DMs", door: "dm" },
   { icon: MonitorPlay, label: "YouTube", sub: "Videos · comments", door: "whatsapp" },
   { icon: Building2, label: "Property portals", sub: "99acres · Magicbricks", door: "whatsapp" }
 ];
@@ -58,7 +59,7 @@ export function AttractChannels() {
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             We run your marketing across every channel that matters in India —
             and no matter where a lead discovers you, they flow into one of
-            three channels where Kriven AI captures and qualifies them.
+            four channels where Kriven AI captures and qualifies them.
           </p>
         </div>
 
@@ -114,13 +115,19 @@ export function AttractChannels() {
           </p>
         </div>
 
-        {/* The three channels that qualify */}
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        {/* The four channels that qualify */}
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <DoorCard
             icon={MessageCircle}
             tone="success"
             title="WhatsApp"
-            line="Ads, posts, reels — even comments — route into WhatsApp, where Kriven AI greets and qualifies in their language."
+            line="Ads (click-to-WhatsApp) and YouTube route into WhatsApp, where Kriven AI greets and qualifies in their language."
+          />
+          <DoorCard
+            icon={Send}
+            tone="success"
+            title="Instagram DM"
+            line="Comment on an organic post and Kriven auto-DMs you — then qualifies you right there in the thread, no app-switching."
           />
           <DoorCard
             icon={PhoneCall}

@@ -34,7 +34,7 @@ export default function ProductPage() {
           "AI-search visibility — cited in ChatGPT, Gemini & Google AI Overviews",
           "Meta & Google ad campaigns, fully designed & managed",
           "Organic YouTube & Instagram — reels from your own site footage",
-          "Comments → DM → WhatsApp, captured automatically",
+          "Organic comments → auto-DM → qualified in-thread",
           "Website chatbot widget that qualifies visitors on the spot",
         ]}
         replaces="Your marketing agency, SEO consultants, and ad managers."

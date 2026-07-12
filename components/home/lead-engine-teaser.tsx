@@ -72,7 +72,7 @@ const SOURCES: Source[] = [
     helps: [
       "Stunning videos from your site footage",
       "Short-form videos for reach",
-      { text: "Auto-replies to comments → DM → WhatsApp", highlight: true },
+      { text: "Comments answered → routed to WhatsApp", highlight: true },
     ],
   },
   {
@@ -82,7 +82,7 @@ const SOURCES: Source[] = [
     helps: [
       "Reels & posts from your site footage",
       "Short-form content that gets discovered",
-      { text: "Auto-replies to comments → DM → WhatsApp", highlight: true },
+      { text: "Auto-replies to comments → DM → qualified in-thread", highlight: true },
     ],
   },
   {

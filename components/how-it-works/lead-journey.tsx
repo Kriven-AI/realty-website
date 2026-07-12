@@ -25,6 +25,8 @@ type Beat = {
   bubble: string;
   /** Re-engage is the outbound / tele-caller recovery band — styled apart. */
   recovery?: boolean;
+  /** An optional / conditional step (e.g. warm-transfer only if requested). */
+  optional?: boolean;
 };
 
 const BEATS: Beat[] = [
@@ -32,7 +34,7 @@ const BEATS: Beat[] = [
     layer: "Capture",
     time: "Sun · 11:04 PM",
     icon: MessageSquareText,
-    what: "Sneha comments “price?” on your reel. Kriven AI auto-replies, DMs her, and she taps through to WhatsApp.",
+    what: "Sneha comments “price?” on your reel. Kriven AI auto-replies and DMs her — the conversation starts right there in Instagram.",
     win: "A casual comment becomes a real, consented lead — automatically.",
     bubble: "“Price & availability?” 💬",
   },
@@ -48,7 +50,7 @@ const BEATS: Beat[] = [
     layer: "Contact",
     time: "11:05 PM",
     icon: MessageCircle,
-    what: "Kriven AI replies in WhatsApp within seconds — in her own language — and picks up the conversation right where she is.",
+    what: "Kriven AI replies in the Instagram DM within seconds — in her own language — and picks up the conversation right where she is.",
     win: "Answered in seconds, at 11 PM. The first to respond wins the lead.",
     bubble: "नमस्ते · வணக்கம் · హాయ் 💬",
   },
@@ -61,26 +63,27 @@ const BEATS: Beat[] = [
     bubble: "Qualified · 3BHK · ₹80L · ready",
   },
   {
-    layer: "Route",
-    time: "11:09 PM",
-    icon: ArrowRightLeft,
-    what: "If Sneha wants to talk to someone, Kriven AI warm-transfers her to your closer — with a full summary of budget, intent, and objections.",
-    win: "Your salesperson gets a briefed, ready lead — not a cold name.",
-    bubble: "Wants a human → warm transfer",
-  },
-  {
     layer: "Book",
-    time: "11:10 PM",
+    time: "11:09 PM",
     icon: CalendarCheck,
     what: "Kriven AI books the site visit — Saturday 4 PM — and assigns a rep, right inside the chat.",
     win: "Booked on the very first contact, while interest is hottest.",
     bubble: "✅ Site visit · Sat 4:00 PM",
   },
   {
+    layer: "Route",
+    time: "11:10 PM",
+    icon: ArrowRightLeft,
+    what: "If Sneha calls and wants to talk to a person, Kriven AI then warm-transfers her to your closer — with a full summary of budget, intent, and objections.",
+    win: "Your salesperson gets a briefed, ready lead — not a cold name.",
+    bubble: "Wants a human → warm transfer",
+    optional: true,
+  },
+  {
     layer: "Confirm",
     time: "Fri & Sat",
     icon: BellRing,
-    what: "Reminders and a re-confirmation go out on WhatsApp, with one-tap reschedule.",
+    what: "Reminders and a re-confirmation go out on the same thread, with one-tap reschedule.",
     win: "No-shows (40–60% industry-wide) drop — more visits actually happen.",
     bubble: "Reminder: tomorrow 4 PM 📍",
   },
@@ -88,9 +91,9 @@ const BEATS: Beat[] = [
     layer: "Prove",
     time: "after the visit",
     icon: BarChart3,
-    what: "Feedback is captured and the dashboard shows this visit came from an Instagram reel — at a known cost.",
+    what: "Feedback is captured and the dashboard shows this visit came from an Instagram reel.",
     win: "You see exactly what every channel and post is worth, in site visits.",
-    bubble: "Visit ✓ · Instagram · ₹420 / visit",
+    bubble: "Visit ✓ · Instagram",
   },
 ];
 
@@ -208,7 +211,7 @@ function BeatCard({
         isActive
           ? "border-brand/40 shadow-[0_12px_36px_-14px_rgba(217,88,62,0.28)]"
           : "border-border-subtle"
-      } ${beat.recovery ? "border-dashed" : ""}`}
+      } ${beat.recovery || beat.optional ? "border-dashed" : ""}`}
     >
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2.5">
@@ -227,6 +230,11 @@ function BeatCard({
           {beat.recovery && (
             <span className="rounded-full bg-warning/10 px-2 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-warning">
               Outbound
+            </span>
+          )}
+          {beat.optional && (
+            <span className="rounded-full border border-border-subtle bg-muted px-2 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-subtle">
+              Optional
             </span>
           )}
         </div>
@@ -282,7 +290,7 @@ function FunnelRail({ active }: { active: number }) {
                   : isDone
                     ? "border-brand/30 bg-brand-tint text-brand"
                     : "border-border-subtle bg-card text-muted-foreground"
-              }`}
+              } ${beat.optional ? "border-dashed" : ""}`}
             >
               <span className="text-[12px] font-semibold">{beat.layer}</span>
             </div>

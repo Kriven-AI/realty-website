@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "Which channels does it generate leads from?",
-    a: "Google search and Google Maps, AI answers (ChatGPT, Gemini, Google AI Overviews), Meta and Google ad campaigns, organic Instagram and YouTube, comments that convert to DMs and WhatsApp, and a website chatbot — all feeding one engine.",
+    a: "Google search and Google Maps, AI answers (ChatGPT, Gemini, Google AI Overviews), Meta and Google ad campaigns, organic Instagram and YouTube, comments captured straight into Instagram DMs, and a website chatbot — all feeding one engine.",
   },
   {
     q: "Does it convert the leads, or just deliver them?",
@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "Can it generate leads from Instagram and YouTube?",
-    a: "Yes. It produces organic reels from your own site footage, and captures the buyers who comment or DM asking for price and details — turning social engagement into WhatsApp conversations automatically.",
+    a: "Yes. It produces organic reels from your own site footage, and captures the buyers who comment or DM asking for price and details — auto-replying and qualifying them right in the Instagram DM, so social engagement becomes booked site visits.",
   },
   {
     q: "What's the best way to generate real estate leads in India?",
