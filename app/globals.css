@@ -123,6 +123,12 @@ body {
   border-radius: 4px;
 }
 
+/* Native buttons default to the arrow cursor — make interactive ones show a
+   pointer (dropdown trigger, FAQ accordions, copy buttons, etc.). */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 /* ---- Typography & visual utilities ---- */
 
 @utility text-gradient {

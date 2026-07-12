@@ -6,7 +6,7 @@ import { ShieldCheck, RefreshCw, Check } from "lucide-react";
 const COMPLIANCE_POINTS = [
   "Consent captured at the source — timestamped & withdrawable",
   "DLT-registered calls & SMS, approved WhatsApp templates",
-  "Every message carries an opt-out, honoured instantly",
+  "Every message carries an opt-out, honoured promptly",
 ];
 
 const fadeUp = {
@@ -34,12 +34,11 @@ export function ComplianceLoop() {
               <ShieldCheck className="h-5.5 w-5.5" />
             </span>
             <h3 className="mt-4 text-xl font-semibold tracking-tight text-foreground">
-              Compliant by design.
+              Compliance, built in.
             </h3>
             <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
-              Every call and message follows India&apos;s DPDP 2025 and
-              TRAI/DLT rules — built in from the first touch, not bolted on
-              after a fine.
+              Built to help you stay aligned with India&apos;s DPDP and TRAI/DLT
+              rules — from the first touch, not bolted on later.
             </p>
             <ul className="mt-4 space-y-2 border-t border-border-subtle pt-4">
               {COMPLIANCE_POINTS.map((p) => (
@@ -53,8 +52,8 @@ export function ComplianceLoop() {
               ))}
             </ul>
             <p className="mt-4 text-[12px] font-medium text-foreground">
-              Penalties run to ₹50 crore — built-in compliance protects you,
-              and earns trust with every lead you reach.
+              Compliance built in from the start helps keep your outreach on the
+              right side of the rules — and earns trust with every lead you reach.
             </p>
           </motion.div>
 

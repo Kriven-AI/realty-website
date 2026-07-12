@@ -39,6 +39,8 @@ export default function ProductPage() {
         ]}
         replaces="Your marketing agency, SEO consultants, and ad managers."
         visual={<LeadGenVisual />}
+        href="/solutions/lead-generation"
+        hrefLabel="Learn more about lead generation"
         reverse
       />
 
@@ -59,6 +61,8 @@ export default function ProductPage() {
         ]}
         replaces="Receptionists, call centers, missed-call apps, and after-hours services."
         visual={<InboundVisual />}
+        href="/solutions/ai-voice-calling"
+        hrefLabel="Learn more about voice calling"
       />
 
       <ModuleSection
@@ -77,6 +81,8 @@ export default function ProductPage() {
         ]}
         replaces="Telecaller teams, dialer software, and chase-the-list spreadsheets."
         visual={<OutboundVisual />}
+        href="/solutions/ai-voice-calling"
+        hrefLabel="Explore outbound calling"
         reverse
       />
 
@@ -97,6 +103,8 @@ export default function ProductPage() {
         ]}
         replaces="Manual ops teams, broadcast tools, and forgotten leads in inboxes."
         visual={<WhatsAppVisual />}
+        href="/solutions/whatsapp-automation"
+        hrefLabel="Learn more about WhatsApp automation"
       />
 
       <ModuleSection
@@ -115,6 +123,8 @@ export default function ProductPage() {
         ]}
         replaces={`Generic analytics dashboards and "how did the calls go?" Slack threads.`}
         visual={<AnalyticsVisual />}
+        href="/solutions/analytics"
+        hrefLabel="Learn more about analytics"
         reverse
       />
 

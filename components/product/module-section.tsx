@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +17,8 @@ export type ModuleSectionProps = {
   visual: React.ReactNode;
   reverse?: boolean;
   status?: "available" | "soon";
+  href?: string;
+  hrefLabel?: string;
 };
 
 export function ModuleSection({
@@ -29,6 +32,8 @@ export function ModuleSection({
   visual,
   reverse = false,
   status = "available",
+  href,
+  hrefLabel,
 }: ModuleSectionProps) {
   return (
     <section
@@ -84,6 +89,16 @@ export function ModuleSection({
               </p>
               <p className="mt-1 text-sm text-foreground">{replaces}</p>
             </div>
+
+            {href && (
+              <Link
+                href={href}
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors hover:text-brand-soft"
+              >
+                {hrefLabel ?? "Learn more"}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            )}
           </motion.div>
 
           {/* Visual */}

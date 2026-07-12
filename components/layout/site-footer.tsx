@@ -6,10 +6,11 @@ const FOOTER_LINKS: { title: string; items: { label: string; href: string }[] }[
     {
       title: "Platform",
       items: [
-        { label: "Inbound Voice AI", href: "/product#inbound" },
-        { label: "Outbound Campaigns", href: "/product#outbound" },
-        { label: "WhatsApp Follow-ups", href: "/product#whatsapp" },
-        { label: "Analytics", href: "/product#analytics" },
+        { label: "Lead Generation", href: "/solutions/lead-generation" },
+        { label: "AI Voice Calling", href: "/solutions/ai-voice-calling" },
+        { label: "WhatsApp Automation", href: "/solutions/whatsapp-automation" },
+        { label: "Lead Management", href: "/solutions/lead-management" },
+        { label: "Analytics & Insights", href: "/solutions/analytics" },
       ],
     },
     {
@@ -23,6 +24,7 @@ const FOOTER_LINKS: { title: string; items: { label: string; href: string }[] }[
       title: "Resources",
       items: [
         { label: "How it works", href: "/how-it-works" },
+        { label: "Blog", href: "/blog" },
         { label: "Contact", href: "/demo" },
       ],
     },
