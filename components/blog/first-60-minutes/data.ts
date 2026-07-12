@@ -5,7 +5,7 @@
 export const POST = {
   title: "The First 60 Minutes of a Real Estate Lead",
   description:
-    "How fast should you respond to a real estate lead? The data is brutal — speed decides who wins. Here's what happens minute by minute, and why under 60 seconds wins.",
+    "How fast should you respond to a real estate lead? Speed decides who wins. Here's what happens minute by minute — and why under 60 seconds wins.",
   slug: "the-first-60-minutes-of-a-real-estate-lead",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

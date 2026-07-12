@@ -1,7 +1,7 @@
 export const POST = {
   title: "One AI Sales Engine vs. Five Separate Vendors: The Real Cost",
   description:
-    "Most builders run marketing, calling, WhatsApp, CRM and analytics as five separate vendors. The real cost isn't the invoices — it's the leads lost between them.",
+    "Most builders run marketing, calling, WhatsApp, CRM and analytics as five vendors. The real cost isn't the invoices — it's the leads lost between them.",
   slug: "one-ai-sales-engine-vs-five-vendors",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

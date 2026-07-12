@@ -5,7 +5,7 @@
 export const POST = {
   title: "Why Your Real Estate Leads Aren't Converting Into Site Visits",
   description:
-    "Marketing says 1,000 leads, sales says they're junk. Usually it's neither — it's a speed and follow-up gap. Here's why leads don't become site visits, and the fix.",
+    "Marketing says 1,000 leads, sales says junk. Usually it's neither — it's a speed and follow-up gap. Here's why leads don't become site visits.",
   slug: "why-real-estate-leads-dont-convert-into-site-visits",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

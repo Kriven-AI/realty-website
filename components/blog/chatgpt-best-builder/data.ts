@@ -2,7 +2,7 @@ export const POST = {
   title:
     "Buyers Are Asking ChatGPT “Best Builder in [City]” — Is Your Project in the Answer?",
   description:
-    "Buyers increasingly ask ChatGPT, Gemini, Perplexity and Google AI for recommendations. If your project isn't cited, you're invisible. Here's how builders show up in AI answers.",
+    "Buyers ask ChatGPT, Gemini and Google AI for recommendations. If your project isn't cited, you're invisible — here's how builders show up in AI answers.",
   slug: "buyers-ask-chatgpt-best-builder-geo",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

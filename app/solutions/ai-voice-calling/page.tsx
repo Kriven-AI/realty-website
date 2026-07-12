@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/solutions/ai-voice-calling" },
   title: "Voice AI Calling for Real Estate",
   description:
-    "Kriven AI's voice agent calls every real estate lead in under 60 seconds — inbound and outbound, in any Indian language — qualifying buyers and booking site visits.",
+    "Kriven AI's voice agent calls every real estate lead in under 60 seconds — inbound and outbound, in any Indian language, and books site visits.",
   openGraph: {
     title: "Voice AI Calling for Real Estate — Kriven AI",
     description:

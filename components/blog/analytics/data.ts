@@ -1,7 +1,7 @@
 export const POST = {
   title: "You Know Your Leads Said No. Do You Know Why?",
   description:
-    "Builders track how many leads convert — rarely why the rest don't. Your calls and WhatsApp chats already hold the answer: objections, intent and what works.",
+    "Builders track how many leads convert — rarely why the rest don't. Your calls and chats already hold the answer: objections, intent and more.",
   slug: "why-real-estate-leads-say-no-analytics",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

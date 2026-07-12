@@ -5,7 +5,7 @@ import { FinalCTA } from "@/components/home/final-cta";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About Kriven AI",
+  title: { absolute: "About Kriven AI" },
   description:
     "Kriven AI is the AI sales engine for Indian real estate builders — built to capture, call, message and follow up with every lead so more become site visits.",
   openGraph: {

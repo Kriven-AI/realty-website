@@ -4,7 +4,7 @@
 export const POST = {
   title: "Your Reel Got 200 Comments Asking “Price?” — How Many Became Leads?",
   description:
-    "Builders capture paid-ad leads but let organic Instagram and YouTube comments die. Those “price?” comments are warm leads — here's how to actually catch them.",
+    "Builders capture paid-ad leads but let organic Instagram comments die. Those “price?” comments are warm leads — here's how to catch them.",
   slug: "turn-instagram-reel-comments-into-real-estate-leads",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

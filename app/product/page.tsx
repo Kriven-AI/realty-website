@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/product" },
   title: "Product — AI Sales Modules for Real Estate",
   description:
-    "Deep dive into Kriven AI's five modules: Lead Generation, Inbound Voice AI, Outbound Campaigns, WhatsApp Follow-ups, and Analytics — all built only for real estate builders.",
+    "Kriven AI's five modules — Lead Generation, Voice AI, Outbound, WhatsApp Follow-ups and Analytics — built only for Indian real estate builders.",
 };
 
 export default function ProductPage() {

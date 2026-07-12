@@ -1,7 +1,7 @@
 export const POST = {
   title: "40–60% of Booked Site Visits Never Happen. Here's How to Cut No-Shows",
   description:
-    "A booked site visit isn't a completed one — many builders lose a huge share to no-shows. Here's why buyers don't turn up, and a WhatsApp playbook to cut it.",
+    "A booked site visit isn't a completed one — many are lost to no-shows. Here's why buyers don't turn up, and a WhatsApp playbook to cut it.",
   slug: "reduce-real-estate-site-visit-no-shows",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

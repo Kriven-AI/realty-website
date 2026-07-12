@@ -1,7 +1,7 @@
 export const POST = {
   title: "Your CRM Isn't Booking Site Visits — CRM vs. Sales Engine",
   description:
-    "A CRM stores your leads and waits. It doesn't call, follow up or book site visits. Here's the difference between a CRM and a sales engine — and why you need both.",
+    "A CRM stores your leads and waits — it doesn't call, follow up or book visits. Here's the difference between a CRM and a sales engine.",
   slug: "crm-vs-sales-engine-real-estate",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",

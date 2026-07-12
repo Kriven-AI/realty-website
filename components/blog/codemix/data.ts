@@ -2,7 +2,7 @@ export const POST = {
   title:
     "The Codemix Problem: Why Generic Voice Bots Fail on Indian Real Estate Calls",
   description:
-    "Indian buyers switch between Hindi, Telugu and English mid-sentence. Generic voice bots break on it — here's why codemix is real estate's hidden AI-calling moat.",
+    "Indian buyers switch Hindi, Telugu and English mid-sentence. Generic voice bots break on it — why codemix is real estate's hidden AI-calling moat.",
   slug: "codemix-problem-voice-bots-indian-real-estate",
   datePublished: "2026-07-11",
   dateModified: "2026-07-11",
