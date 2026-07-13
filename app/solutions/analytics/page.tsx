@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/solutions/analytics/hero";
 import { TheBlindSpot } from "@/components/solutions/analytics/the-blind-spot";
+import { InsightsDashboard } from "@/components/solutions/analytics/insights-dashboard";
 import { Capabilities } from "@/components/solutions/analytics/capabilities";
 import { BuiltForRealEstate } from "@/components/solutions/analytics/built-for-real-estate";
 import { Faq } from "@/components/solutions/analytics/faq";
@@ -27,6 +28,7 @@ export default function AnalyticsPage() {
       <Breadcrumbs schemaOnly items={[{ name: "Home", item: "https://kriven.ai" }, { name: "Product", item: "https://kriven.ai/product" }, { name: "Analytics & Insights", item: "https://kriven.ai/solutions/analytics" }]} />
       <Hero />
       <TheBlindSpot />
+      <InsightsDashboard />
       <Capabilities />
       <BuiltForRealEstate />
       <Faq />
