@@ -8,6 +8,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "Comparison",
+  takeaways: [
+    "Most builders stitch together an agency, telecallers, a WhatsApp tool, a CRM and spreadsheets.",
+    "The real cost isn't the invoices — it's the leads lost in the gaps between tools.",
+    "Fragmentation means no single owner of the outcome and context lost at every handoff.",
+    "One platform means one bill, one source of truth, and one thing accountable for booked visits.",
+  ],
 };
 
 export type Vendor = { name: string; role: string; problem: string };

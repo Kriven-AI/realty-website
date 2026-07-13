@@ -9,6 +9,12 @@ export const POST = {
   readTime: "7 min read",
   dateDisplay: "July 2026",
   category: "AI search",
+  takeaways: [
+    "Buyers increasingly ask ChatGPT, Gemini, Perplexity and Google AI for builder recommendations.",
+    "Around 58% of consumers now use generative AI instead of traditional search for recommendations.",
+    "Real estate is barely optimising for AI answers, so it's an open first-mover opportunity.",
+    "Get cited with answer-first content, structured data, consistent info and multi-source mentions.",
+  ],
 };
 
 export type Stat = { figure: string; body: string; note: string };

@@ -8,6 +8,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "CRM vs sales engine",
+  takeaways: [
+    "A CRM is a system of record; a sales engine is a system of action.",
+    "A CRM stores leads and waits — about 90% of leads in a real-estate CRM get no follow-up after 30 days.",
+    "A sales engine calls, qualifies and follows up with every lead automatically, 24/7.",
+    "You can keep your CRM and add a sales engine to actually work the leads.",
+  ],
 };
 
 export const GREAT: string[] = [

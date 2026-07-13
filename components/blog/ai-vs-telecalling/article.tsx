@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { KrivenFit } from "@/components/blog/kriven-fit";
 import { POST, COMPARE, HUMAN_WINS, FAQS } from "./data";
+import { KeyTakeaways } from "@/components/blog/key-takeaways";
 
 function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
   const [open, setOpen] = useState(i === 0);
@@ -62,6 +63,7 @@ export function Article() {
         <p className="mt-4 text-sm text-subtle">
           {POST.dateDisplay} · {POST.readTime}
         </p>
+        <KeyTakeaways items={POST.takeaways} />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Should a builder run a telecalling team, an AI voice agent, or both?
           Here&apos;s the honest breakdown. The short answer: AI wins decisively

@@ -11,6 +11,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "Organic social",
+  takeaways: [
+    "Organic Instagram comments asking \"price?\" are warm leads most builders never capture.",
+    "A viral reel can draw 500–2,000 comments; if about 20% ask price, that's 100–400 warm leads overnight.",
+    "Reply publicly, auto-DM, then qualify right in the Instagram DM — no need to move organic leads to WhatsApp.",
+    "Speed wins: replying to a DM within a minute converts far better than 30 minutes later.",
+  ],
 };
 
 export type Stat = { figure: string; body: string; note: string };

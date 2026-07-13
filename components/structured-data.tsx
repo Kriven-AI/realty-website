@@ -1,13 +1,14 @@
 /**
- * Site-wide JSON-LD structured data. Invisible to humans, but it lets
- * Google (and AI engines like ChatGPT / AI Overviews) understand exactly
- * what Kriven AI is — and tells Google the official site name to show.
+ * Site-wide JSON-LD structured data. Invisible to humans, but it lets Google
+ * and AI engines (ChatGPT, Gemini, Perplexity, AI Overviews) understand
+ * exactly what Kriven AI is — a clear "entity" they can confidently cite.
  *
- * We use Organization + WebSite (both fully valid, no missing-field
- * warnings). We deliberately omit SoftwareApplication: without public
- * pricing/ratings it can't form a valid rich result and only adds
- * Rich-Results-Test warnings. Add it back if/when there's an offer or
- * aggregateRating to show.
+ * Organization + WebSite + SoftwareApplication. The SoftwareApplication has no
+ * `offers`/`aggregateRating` yet (no public pricing or reviews), so Google
+ * won't render a product rich result — but the entity data still helps AI
+ * understand this is a product. Add `offers`/`aggregateRating` once available.
+ * Add `sameAs` (LinkedIn / Crunchbase / G2 URLs) to ORGANIZATION once those
+ * profiles exist — it links this site to those sources for AI cross-reference.
  */
 
 const ORGANIZATION = {
@@ -16,8 +17,28 @@ const ORGANIZATION = {
   name: "Kriven AI",
   url: "https://kriven.ai",
   logo: "https://kriven.ai/icon.png",
+  image: "https://kriven.ai/icon.png",
   description:
     "Kriven AI is the all-in-one AI sales engine for Indian real estate — lead generation, inbound voice AI, outbound campaigns, WhatsApp follow-ups and analytics, in one platform.",
+  slogan: "Every step of the sale. One platform.",
+  email: "hello@kriven.ai",
+  areaServed: { "@type": "Country", name: "India" },
+  knowsAbout: [
+    "Real estate sales",
+    "AI voice calling",
+    "Lead generation for real estate",
+    "WhatsApp automation",
+    "Lead management",
+    "Real estate CRM",
+    "Sales analytics",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@kriven.ai",
+    contactType: "sales",
+    areaServed: "IN",
+  },
+  // sameAs: ["https://www.linkedin.com/company/...", "https://www.crunchbase.com/organization/...", "https://www.g2.com/products/..."],
 };
 
 const WEBSITE = {
@@ -25,19 +46,43 @@ const WEBSITE = {
   "@type": "WebSite",
   name: "Kriven AI",
   url: "https://kriven.ai",
+  publisher: { "@type": "Organization", name: "Kriven AI", url: "https://kriven.ai" },
+};
+
+const SOFTWARE_APPLICATION = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Kriven AI",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://kriven.ai",
+  description:
+    "AI sales engine for Indian real estate builders — it generates leads, then calls, WhatsApps, qualifies and follows up with every lead until a site visit is booked.",
+  featureList: [
+    "AI voice calling — inbound and outbound",
+    "WhatsApp automation and follow-up",
+    "Lead generation across every channel",
+    "Lead management and tracking",
+    "Sales analytics and lead intelligence",
+  ],
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType: "Real estate builders and developers in India",
+  },
+  publisher: { "@type": "Organization", name: "Kriven AI", url: "https://kriven.ai" },
 };
 
 export function StructuredData() {
+  const graph = [ORGANIZATION, WEBSITE, SOFTWARE_APPLICATION];
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE) }}
-      />
+      {graph.map((node, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(node) }}
+        />
+      ))}
     </>
   );
 }

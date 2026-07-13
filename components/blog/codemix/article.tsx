@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { KrivenFit } from "@/components/blog/kriven-fit";
 import { POST, EXAMPLES, FAILURES, FAQS } from "./data";
+import { KeyTakeaways } from "@/components/blog/key-takeaways";
 
 function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
   const [open, setOpen] = useState(i === 0);
@@ -61,6 +62,7 @@ export function Article() {
         <p className="mt-4 text-sm text-subtle">
           {POST.dateDisplay} · {POST.readTime}
         </p>
+        <KeyTakeaways items={POST.takeaways} />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Indian buyers don&apos;t speak in one language. They ask about price in
           Hindi, possession in English and switch to Telugu for the loan — often

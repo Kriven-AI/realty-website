@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { KrivenFit } from "@/components/blog/kriven-fit";
 import { POST, TEMPLATES, FAQS, type Template } from "./data";
+import { KeyTakeaways } from "@/components/blog/key-takeaways";
 
 const RULES = [
   {
@@ -157,6 +158,7 @@ export function Article() {
         <p className="mt-4 text-sm text-subtle">
           {POST.dateDisplay} · {POST.readTime}
         </p>
+        <KeyTakeaways items={POST.takeaways} />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Good WhatsApp follow-up is what turns a portal enquiry into a booked
           site visit. Below are 12 copy-paste templates for every stage — new

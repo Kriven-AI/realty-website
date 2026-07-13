@@ -7,6 +7,7 @@ import { ChevronDown, ArrowRight, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { POST, CRITERIA, TOOLS, FAQS } from "./data";
+import { KeyTakeaways } from "@/components/blog/key-takeaways";
 
 function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
   const [open, setOpen] = useState(i === 0);
@@ -61,6 +62,7 @@ export function Article() {
         <p className="mt-4 text-sm text-subtle">
           {POST.dateDisplay} · {POST.readTime}
         </p>
+        <KeyTakeaways items={POST.takeaways} />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           There&apos;s no single &ldquo;best&rdquo; tool — the right choice
           depends on whether your problem is storing leads, automating campaigns,

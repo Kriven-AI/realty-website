@@ -9,6 +9,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "India-native AI",
+  takeaways: [
+    "Indian buyers mix Hindi, Telugu and English mid-sentence — code-mixing is completely normal.",
+    "Generic voice bots trained on single-language speech break on it or force a language choice.",
+    "An India-native agent follows language switches mid-call without losing context.",
+    "On a high-value decision, sounding human in the buyer's language is what earns trust.",
+  ],
 };
 
 export const EXAMPLES: string[] = [

@@ -8,6 +8,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "Cost of inaction",
+  takeaways: [
+    "The most expensive leads are the ones you paid for but never reached.",
+    "Around 62% of property enquiries arrive after hours, and most missed calls are never returned.",
+    "About 80% of sales need 5+ follow-ups, but 44% of reps quit after one.",
+    "The leak often runs to lakhs a year — money already spent on leads that were never worked.",
+  ],
 };
 
 export type Leak = { title: string; body: string; stat: string };

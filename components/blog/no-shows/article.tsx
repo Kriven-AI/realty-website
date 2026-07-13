@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { KrivenFit } from "@/components/blog/kriven-fit";
 import { POST, REASONS, PLAYBOOK, FAQS } from "./data";
+import { KeyTakeaways } from "@/components/blog/key-takeaways";
 
 function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
   const [open, setOpen] = useState(i === 0);
@@ -61,6 +62,7 @@ export function Article() {
         <p className="mt-4 text-sm text-subtle">
           {POST.dateDisplay} · {POST.readTime}
         </p>
+        <KeyTakeaways items={POST.takeaways} />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           A site visit is the moment a lead becomes a real buyer — it&apos;s the
           single biggest jump in your funnel. So the fact that a large share of

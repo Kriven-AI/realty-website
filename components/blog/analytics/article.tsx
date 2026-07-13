@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { KrivenFit } from "@/components/blog/kriven-fit";
 import { POST, INSIGHTS, FAQS } from "./data";
+import { KeyTakeaways } from "@/components/blog/key-takeaways";
 
 function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
   const [open, setOpen] = useState(i === 0);
@@ -61,6 +62,7 @@ export function Article() {
         <p className="mt-4 text-sm text-subtle">
           {POST.dateDisplay} · {POST.readTime}
         </p>
+        <KeyTakeaways items={POST.takeaways} />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Most builders can tell you how many leads converted last month. Very
           few can tell you why the other 95% didn&apos;t. That gap is expensive —

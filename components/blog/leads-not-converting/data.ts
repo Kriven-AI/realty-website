@@ -12,6 +12,12 @@ export const POST = {
   readTime: "9 min read",
   dateDisplay: "July 2026",
   category: "Lead conversion",
+  takeaways: [
+    "Most real estate leads don't convert because of slow response and weak follow-up — not lead quality.",
+    "Contacting a lead within 5 minutes vs 30 makes you about 100× more likely to connect (MIT/InsideSales).",
+    "Around 80% of sales need 5+ follow-ups, yet 44% of salespeople give up after the first.",
+    "Fix the process — fast response, persistent follow-up, qualification — and the same leads convert.",
+  ],
 };
 
 export type Reason = {

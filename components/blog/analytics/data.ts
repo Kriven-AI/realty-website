@@ -8,6 +8,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "Analytics",
+  takeaways: [
+    "Builders track how many leads convert, but rarely why the rest don't.",
+    "Every call and WhatsApp chat holds the answer: objections, intent, channels and competitor signals.",
+    "You can see which competing projects buyers keep raising — and what you're losing on.",
+    "Turn conversations into decisions on pricing, budget, pitches and coaching.",
+  ],
 };
 
 export type Insight = { title: string; body: string };

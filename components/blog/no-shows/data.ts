@@ -8,6 +8,12 @@ export const POST = {
   readTime: "6 min read",
   dateDisplay: "July 2026",
   category: "Site visits",
+  takeaways: [
+    "Many builders lose 40–50% or more of booked site visits to no-shows.",
+    "Buyers miss visits mostly due to no confirmation, no reminder, or no easy way to reschedule.",
+    "Reminders 24 hours and 2 hours before can cut no-shows by up to 40%.",
+    "Confirm instantly, remind, make rescheduling one tap, and recover no-shows the same day.",
+  ],
 };
 
 export const REASONS: string[] = [

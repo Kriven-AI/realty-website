@@ -11,6 +11,12 @@ export const POST = {
   readTime: "8 min read",
   dateDisplay: "July 2026",
   category: "Comparison",
+  takeaways: [
+    "AI wins on speed, availability, languages, consistency, follow-up and cost; humans win on closing.",
+    "An Indian telecaller costs ₹12k–25k+ a month plus training, management and 30–50% annual attrition.",
+    "An AI voice agent responds in under 60 seconds, 24/7, in any Indian language.",
+    "Best setup: AI for volume and first response, humans for closing warm, qualified buyers.",
+  ],
 };
 
 export type Row = { dimension: string; human: string; ai: string };

@@ -12,6 +12,12 @@ export const POST = {
   readTime: "7 min read",
   dateDisplay: "July 2026",
   category: "Speed to lead",
+  takeaways: [
+    "Respond to a new real estate lead within 5 minutes — ideally under 60 seconds.",
+    "Within 5 minutes vs 30, you're about 100× more likely to connect and 21× more likely to qualify.",
+    "About 78% of buyers go with the first business to respond.",
+    "The average real-estate response time is around 15 hours, so speed is an unfair advantage.",
+  ],
 };
 
 export type Stage = {

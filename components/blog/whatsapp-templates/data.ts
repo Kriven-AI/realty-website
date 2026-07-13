@@ -12,6 +12,12 @@ export const POST = {
   readTime: "8 min read",
   dateDisplay: "July 2026",
   category: "WhatsApp",
+  takeaways: [
+    "WhatsApp gets around 98% open rates and is where Indian property buyers actually convert.",
+    "About 80% of sales need 5+ follow-ups, yet most builders stop after one.",
+    "Use fast, personal messages with one clear next step — the site visit.",
+    "Reply within 60 seconds and follow up across the buyer's journey with ready-made templates.",
+  ],
 };
 
 export type Template = {

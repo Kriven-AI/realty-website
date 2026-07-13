@@ -12,6 +12,12 @@ export const POST = {
   readTime: "9 min read",
   dateDisplay: "July 2026",
   category: "Buyer's guide",
+  takeaways: [
+    "There's no single best tool — it depends on whether you need storage, automation or conversion.",
+    "Sell.Do is a full property CRM, LeadSquared is automation at scale, Zoho is flexible and cheap, PropFlo is channel-partner focused.",
+    "Kriven AI is an execution layer that both generates and works leads, not just a database.",
+    "If leads leak after capture, an AI engine that calls and follows up matters more than any CRM.",
+  ],
 };
 
 export const CRITERIA: { title: string; body: string }[] = [
