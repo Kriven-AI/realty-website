@@ -23,6 +23,7 @@ import {
   ArrowDown,
   Workflow,
   Search,
+  UserCheck,
   type LucideIcon,
 } from "lucide-react";
 
@@ -100,9 +101,30 @@ const SOURCES: Source[] = [
 /* ---------------- Channels that qualify + the pipeline ---------------- */
 
 const QUALIFY_CHANNELS = [
-  { key: "whatsapp", label: "WhatsApp", icon: MessageCircle },
-  { key: "voice", label: "Voice AI · Call", icon: PhoneCall },
-  { key: "chatbot", label: "Interactive Chatbot · Website", icon: Bot },
+  {
+    key: "whatsapp",
+    label: "WhatsApp",
+    icon: MessageCircle,
+    when: "When they tap a Meta / Google ad, or our reply to a YouTube comment",
+  },
+  {
+    key: "instagram",
+    label: "Instagram DM",
+    icon: Camera,
+    when: "When they comment on a reel/post — qualified in the same thread",
+  },
+  {
+    key: "voice",
+    label: "Voice AI call",
+    icon: PhoneCall,
+    when: "When they call in — or prefer a call over chat",
+  },
+  {
+    key: "chatbot",
+    label: "Website chatbot",
+    icon: Bot,
+    when: "When they land on your website",
+  },
 ];
 
 /* ---------------- Sneha — the animated one-lead example ---------------- */
@@ -110,19 +132,19 @@ const QUALIFY_CHANNELS = [
 type FlowNode = { label: string; icon: LucideIcon };
 
 const FLOW: FlowNode[] = [
-  { label: "Instagram", icon: Camera },
+  { label: "Meta ad", icon: Megaphone },
   { label: "WhatsApp", icon: MessageCircle },
-  { label: "Qualify", icon: Target },
-  { label: "Book", icon: CalendarCheck },
-  { label: "Site visit", icon: CheckCircle2 },
+  { label: "Qualified", icon: Target },
+  { label: "Booked", icon: CalendarCheck },
+  { label: "Handoff", icon: UserCheck },
 ];
 
 const SNEHA = [
-  "11:04 PM · Sneha taps your Instagram reel",
-  "11:05 PM · Kriven AI replies on WhatsApp — in her own language",
+  "11:04 PM · Sneha taps your Meta ad — one tap straight into WhatsApp",
+  "11:05 PM · Kriven AI greets her on WhatsApp — in her own language",
   "11:08 PM · 3BHK · ₹80L · ready to buy → 🔥 HOT lead",
-  "11:10 PM · Site visit booked — Saturday 4 PM ✅",
-  "★ She shows up. Your team closes the sale.",
+  "11:10 PM · Site visit booked + brochure sent, all in the same thread ✅",
+  "★ Your sales rep is notified with her full history. They just close.",
 ];
 
 const LOVES: { icon: LucideIcon; label: string }[] = [
@@ -132,7 +154,7 @@ const LOVES: { icon: LucideIcon; label: string }[] = [
   { icon: CalendarCheck, label: "Books site visits" },
 ];
 
-const STEP_MS = 2000;
+const STEP_MS = 3500;
 
 export function LeadEngineTeaser() {
   return (
@@ -211,10 +233,10 @@ export function LeadEngineTeaser() {
                 className="mt-4 rounded-2xl border border-border-subtle bg-card p-6"
               >
                 <p className="text-center text-[11px] font-semibold uppercase tracking-wider text-subtle">
-                  Every channel flows into
+                  The moment a lead comes in
                 </p>
                 <p className="mt-1 text-center text-sm font-semibold text-foreground">
-                  Channels that qualify
+                  It lands where it gets qualified
                 </p>
 
                 <div className="mt-4 space-y-2.5">
@@ -223,14 +245,19 @@ export function LeadEngineTeaser() {
                     return (
                       <div
                         key={c.key}
-                        className="flex items-center gap-3 rounded-xl border border-border-subtle bg-background/50 px-4 py-3"
+                        className="flex items-start gap-3 rounded-xl border border-border-subtle bg-background/50 px-4 py-3"
                       >
-                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-tint text-brand ring-1 ring-inset ring-brand/15">
+                        <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-tint text-brand ring-1 ring-inset ring-brand/15">
                           <Icon className="h-4.5 w-4.5" />
                         </span>
-                        <span className="text-sm font-semibold text-foreground">
-                          {c.label}
-                        </span>
+                        <div className="min-w-0">
+                          <p className="text-sm font-semibold text-foreground">
+                            {c.label}
+                          </p>
+                          <p className="mt-0.5 text-[11.5px] leading-snug text-subtle">
+                            {c.when}
+                          </p>
+                        </div>
                       </div>
                     );
                   })}

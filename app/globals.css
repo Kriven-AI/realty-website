@@ -129,6 +129,25 @@ button:not(:disabled) {
   cursor: pointer;
 }
 
+/* Marquee for the integrations strip — a continuous horizontal scroll.
+   The track holds two identical copies, so -50% loops seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 /* ---- Typography & visual utilities ---- */
 
 @utility text-gradient {
