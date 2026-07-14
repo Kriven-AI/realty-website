@@ -11,6 +11,7 @@ import {
   Bot,
   MessageCircle,
   Phone,
+  Waypoints,
   type LucideIcon,
 } from "lucide-react";
 
@@ -57,15 +58,16 @@ export function Integrations() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
-          <motion.p
+          <motion.span
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.55, ease }}
-            className="font-mono text-xs uppercase tracking-[0.18em] text-brand-soft"
+            className="inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-tint px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand"
           >
+            <Waypoints className="h-3.5 w-3.5" />
             Every channel, one engine
-          </motion.p>
+          </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}

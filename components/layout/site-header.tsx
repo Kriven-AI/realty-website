@@ -4,7 +4,18 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useLenis } from "lenis/react";
-import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import {
+  Menu,
+  X,
+  ArrowRight,
+  ChevronDown,
+  Megaphone,
+  PhoneCall,
+  MessageCircle,
+  LayoutList,
+  LineChart,
+  type LucideIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteLogo } from "@/components/site-logo";
 import { cn } from "@/lib/utils";
@@ -14,33 +25,43 @@ const SOLUTIONS = [
     label: "Lead Generation",
     href: "/solutions/lead-generation",
     desc: "Bring buyers in from every channel",
+    icon: Megaphone,
   },
   {
     label: "AI Voice Calling",
     href: "/solutions/ai-voice-calling",
     desc: "Inbound + outbound calling, 24/7",
+    icon: PhoneCall,
   },
   {
     label: "WhatsApp Automation",
     href: "/solutions/whatsapp-automation",
     desc: "Follow-up that never forgets",
+    icon: MessageCircle,
   },
   {
     label: "Lead Management",
     href: "/solutions/lead-management",
     desc: "Every lead, tracked and worked",
+    icon: LayoutList,
   },
   {
     label: "Analytics & Insights",
     href: "/solutions/analytics",
     desc: "Know who your buyers really are",
+    icon: LineChart,
   },
 ];
 
 type NavLink = {
   label: string;
   href?: string;
-  children?: { label: string; href: string; desc: string }[];
+  children?: {
+    label: string;
+    href: string;
+    desc: string;
+    icon: LucideIcon;
+  }[];
 };
 
 const NAV_LINKS: NavLink[] = [
@@ -140,9 +161,11 @@ export function SiteHeader() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl shadow-[0_4px_24px_-16px_rgba(26,24,23,0.25)]"
-          : "",
+        mobileOpen
+          ? "bg-background shadow-[0_4px_24px_-16px_rgba(26,24,23,0.25)]"
+          : scrolled
+            ? "bg-background/80 backdrop-blur-xl shadow-[0_4px_24px_-16px_rgba(26,24,23,0.25)]"
+            : "",
       )}
     >
       <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
@@ -162,18 +185,23 @@ export function SiteHeader() {
                   <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
                 <div className="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                  <div className="w-72 rounded-2xl border border-border-subtle bg-background/95 p-2 shadow-[0_8px_30px_-8px_rgba(26,24,23,0.18)] backdrop-blur-xl">
+                  <div className="w-80 rounded-2xl border border-border-subtle bg-background/95 p-2 shadow-[0_8px_30px_-8px_rgba(26,24,23,0.18)] backdrop-blur-xl">
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-foreground/[0.05]"
+                        className="flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-foreground/[0.05]"
                       >
-                        <span className="block text-sm font-medium text-foreground">
-                          {child.label}
+                        <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-tint text-brand ring-1 ring-inset ring-brand/15">
+                          <child.icon className="h-4 w-4" />
                         </span>
-                        <span className="mt-0.5 block text-xs text-muted-foreground">
-                          {child.desc}
+                        <span className="min-w-0">
+                          <span className="block text-sm font-medium text-foreground">
+                            {child.label}
+                          </span>
+                          <span className="mt-0.5 block text-xs text-muted-foreground">
+                            {child.desc}
+                          </span>
                         </span>
                       </Link>
                     ))}
@@ -217,24 +245,39 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border-subtle bg-background/95 backdrop-blur-xl md:hidden">
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border-subtle md:hidden">
           <div className="space-y-1 px-6 py-6">
             {NAV_LINKS.map((link) =>
               link.children ? (
-                <div key={link.label} className="pt-2">
-                  <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-wider text-subtle">
+                <div key={link.label} className="pt-3">
+                  <p className="px-1 pb-2 text-[11px] font-semibold uppercase tracking-wider text-subtle">
                     {link.label}
                   </p>
-                  {link.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block rounded-lg px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-foreground/[0.05] hover:text-foreground"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
+                  <div className="overflow-hidden rounded-2xl border border-border-subtle">
+                    {link.children.map((child, i) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={cn(
+                          "flex items-start gap-3 px-3.5 py-3 transition-colors hover:bg-foreground/[0.04]",
+                          i > 0 && "border-t border-border-subtle",
+                        )}
+                      >
+                        <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-tint text-brand ring-1 ring-inset ring-brand/15">
+                          <child.icon className="h-4 w-4" />
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-[15px] font-medium text-foreground">
+                            {child.label}
+                          </span>
+                          <span className="mt-0.5 block text-[12.5px] leading-snug text-muted-foreground">
+                            {child.desc}
+                          </span>
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 <Link
@@ -242,7 +285,7 @@ export function SiteHeader() {
                   href={link.href!}
                   scroll={!link.href!.includes("#")}
                   onClick={(e) => handleNavClick(e, link.href!)}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-foreground/[0.05] hover:text-foreground"
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-foreground/[0.05]"
                 >
                   {link.label}
                 </Link>

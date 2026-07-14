@@ -10,6 +10,10 @@ const ROWS: { without: string; with: string }[] = [
     with: "Google & Meta ad leads captured - called in 60 seconds",
   },
   {
+    without: "Insta & YouTube comments ignored — warm leads leak",
+    with: "Every Insta & YouTube comment captured and qualified",
+  },
+  {
     without: "Calls missed on nights & weekends",
     with: "Calls answered 24/7, in their language",
   },
@@ -20,6 +24,10 @@ const ROWS: { without: string; with: string }[] = [
   {
     without: "WhatsApp goes silent, the lead dies",
     with: "Every lead followed up on WhatsApp too, besides calls",
+  },
+  {
+    without: "Sales rep starts every call from scratch",
+    with: "Warm handoff with the lead’s full history",
   },
   {
     without: "No idea why a lead said no",

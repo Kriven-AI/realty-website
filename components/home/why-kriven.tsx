@@ -1,13 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Layers, Brain, Languages, BadgeCheck } from "lucide-react";
+import {
+  Building2,
+  Layers,
+  Brain,
+  Languages,
+  BadgeCheck,
+  MessagesSquare,
+  Zap,
+  Repeat,
+  Users,
+} from "lucide-react";
 
 const PILLARS = [
   {
     icon: Building2,
     title: "Built only for real estate",
     body: "Not generic SaaS retrofitted for builders. Every workflow, prompt, and metric is shaped around how real estate actually sells — site visits, project inventory, possession dates, builder objections.",
+  },
+  {
+    icon: MessagesSquare,
+    title: "No lead leaks — even the organic ones",
+    body: "Most builders never work the buyers who comment ‘Price?’ on a reel or YouTube video — no one can DM 200 commenters. Kriven AI replies in seconds and qualifies them right there: in the Instagram DM, or on WhatsApp from YouTube. Your warmest, cheapest leads stop leaking.",
+  },
+  {
+    icon: Zap,
+    title: "Answers calls 24/7",
+    body: "A buyer who waits an hour is already talking to another builder. Kriven AI picks up every call and message in under a minute, 24/7 — so you reach leads while intent is still hot, even at 2 AM.",
+  },
+  {
+    icon: Repeat,
+    title: "Follow-up that never gives up",
+    body: "Most deals die from no follow-up, not no interest. Kriven AI keeps nudging every lead on WhatsApp — politely, on schedule — until they book a visit or clearly opt out. Nothing is forgotten after the second try.",
+  },
+  {
+    icon: Users,
+    title: "Every lead worked — not just the loudest",
+    body: "Telecallers cherry-pick and burn out. Kriven AI works thousands of leads in parallel with the same energy on the first and the ten-thousandth — so the quiet lead gets the same shot as the obvious one.",
   },
   {
     icon: Layers,
@@ -21,8 +51,8 @@ const PILLARS = [
   },
   {
     icon: Languages,
-    title: "Made for India",
-    body: "Telugu, Hindi, English — and the codemix builders actually hear on calls. WhatsApp-first because that's where leads reply. Built for the speed of the Indian real estate market.",
+    title: "Made for India covering 20+ languages",
+    body: "Telugu, Tamil, Kannada, Marathi, Malayalam, Hindi, English and many more. WhatsApp-first because that's where leads reply. Built for the speed of the Indian real estate market.",
   },
 ];
 

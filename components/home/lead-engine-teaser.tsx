@@ -288,7 +288,7 @@ export function LeadEngineTeaser() {
             href="/how-it-works"
             className="group inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground shadow-[0_10px_30px_-10px_rgba(217,88,62,0.5)] transition-transform hover:scale-[1.02]"
           >
-            See the full step-by-step breakdown
+            Explore the full breakdown
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -381,75 +381,135 @@ function SnehaFlow() {
 
   return (
     <div className="mx-auto mt-12 max-w-3xl">
-      <div className="relative px-5">
-        {/* track + progress */}
-        <div className="absolute left-5 right-5 top-6 h-0.5 -translate-y-1/2 rounded-full bg-border-subtle" />
-        <motion.div
-          className="absolute left-5 top-6 h-0.5 -translate-y-1/2 rounded-full bg-brand"
-          animate={{ width: `calc((100% - 2.5rem) * ${pct / 100})` }}
-          transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-        />
-        {/* Sneha token */}
-        <motion.div
-          className="absolute top-6 z-20 -translate-x-1/2 -translate-y-1/2"
-          animate={{ left: `calc(1.25rem + (100% - 2.5rem) * ${pct / 100})` }}
-          transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
-        >
-          <span className="flex items-center gap-1 rounded-full bg-brand px-2 py-0.5 text-[10px] font-semibold text-brand-foreground shadow-[0_6px_16px_-4px_rgba(217,88,62,0.6)]">
-            <User className="h-3 w-3" />
-            Sneha
-          </span>
-        </motion.div>
+      {/* Desktop — horizontal flow */}
+      <div className="hidden sm:block">
+        <div className="relative px-5">
+          {/* track + progress */}
+          <div className="absolute left-5 right-5 top-6 h-0.5 -translate-y-1/2 rounded-full bg-border-subtle" />
+          <motion.div
+            className="absolute left-5 top-6 h-0.5 -translate-y-1/2 rounded-full bg-brand"
+            animate={{ width: `calc((100% - 2.5rem) * ${pct / 100})` }}
+            transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+          />
+          {/* Sneha token */}
+          <motion.div
+            className="absolute top-6 z-20 -translate-x-1/2 -translate-y-1/2"
+            animate={{ left: `calc(1.25rem + (100% - 2.5rem) * ${pct / 100})` }}
+            transition={{ duration: 0.7, ease: [0.2, 0.8, 0.2, 1] }}
+          >
+            <span className="flex items-center gap-1 rounded-full bg-brand px-2 py-0.5 text-[10px] font-semibold text-brand-foreground shadow-[0_6px_16px_-4px_rgba(217,88,62,0.6)]">
+              <User className="h-3 w-3" />
+              Sneha
+            </span>
+          </motion.div>
 
-        {/* nodes */}
-        <div className="relative grid grid-cols-5">
-          {FLOW.map((node, i) => {
-            const active = i === step;
-            const done = i < step;
-            const Icon = node.icon;
-            return (
-              <div key={node.label} className="flex flex-col items-center">
-                <span
-                  className={`relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-xl border-2 transition-all duration-500 ${
-                    active
-                      ? "scale-110 border-brand bg-brand text-brand-foreground shadow-[0_10px_24px_-8px_rgba(217,88,62,0.55)]"
-                      : done
-                        ? "border-brand/40 bg-brand-tint text-brand"
-                        : "border-border-subtle bg-card text-subtle"
-                  }`}
-                >
-                  <Icon className="h-5 w-5" />
-                </span>
-                <span
-                  className={`mt-2.5 text-[11.5px] font-semibold transition-colors ${
-                    active || done ? "text-foreground" : "text-muted-foreground"
-                  }`}
-                >
-                  {node.label}
-                </span>
-              </div>
-            );
-          })}
+          {/* nodes */}
+          <div className="relative grid grid-cols-5">
+            {FLOW.map((node, i) => {
+              const active = i === step;
+              const done = i < step;
+              const Icon = node.icon;
+              return (
+                <div key={node.label} className="flex flex-col items-center">
+                  <span
+                    className={`relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-xl border-2 transition-all duration-500 ${
+                      active
+                        ? "scale-110 border-brand bg-brand text-brand-foreground shadow-[0_10px_24px_-8px_rgba(217,88,62,0.55)]"
+                        : done
+                          ? "border-brand/40 bg-brand-tint text-brand"
+                          : "border-border-subtle bg-card text-subtle"
+                    }`}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span
+                    className={`mt-2.5 text-[11.5px] font-semibold transition-colors ${
+                      active || done ? "text-foreground" : "text-muted-foreground"
+                    }`}
+                  >
+                    {node.label}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* caption */}
+        <div className="mt-6 flex justify-center">
+          <motion.div
+            key={SNEHA[step]}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card px-4 py-2 shadow-[0_4px_16px_-6px_rgba(26,24,23,0.12)]"
+          >
+            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand/15 text-brand">
+              <User className="h-3 w-3" />
+            </span>
+            <span className="text-[13px] font-medium text-foreground">
+              {SNEHA[step]}
+            </span>
+          </motion.div>
         </div>
       </div>
 
-      {/* caption */}
-      <div className="mt-6 flex justify-center">
-        <motion.div
-          key={SNEHA[step]}
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card px-4 py-2 shadow-[0_4px_16px_-6px_rgba(26,24,23,0.12)]"
-        >
-          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-brand/15 text-brand">
-            <User className="h-3 w-3" />
-          </span>
-          <span className="text-[13px] font-medium text-foreground">
-            {SNEHA[step]}
-          </span>
-        </motion.div>
-      </div>
+      {/* Mobile — vertical stepper (each step shows its own caption) */}
+      <ol className="sm:hidden">
+        {FLOW.map((node, i) => {
+          const active = i === step;
+          const done = i < step;
+          const Icon = node.icon;
+          const isLast = i === FLOW.length - 1;
+          return (
+            <li key={node.label} className="relative flex gap-4 pb-6 last:pb-0">
+              {!isLast && (
+                <span
+                  className={`absolute bottom-1 left-[21px] top-11 w-0.5 rounded-full transition-colors duration-500 ${
+                    done ? "bg-brand/50" : "bg-border-subtle"
+                  }`}
+                />
+              )}
+              <span
+                className={`relative z-10 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border-2 transition-all duration-500 ${
+                  active
+                    ? "border-brand bg-brand text-brand-foreground shadow-[0_10px_24px_-8px_rgba(217,88,62,0.55)]"
+                    : done
+                      ? "border-brand/40 bg-brand-tint text-brand"
+                      : "border-border-subtle bg-card text-subtle"
+                }`}
+              >
+                <Icon className="h-5 w-5" />
+              </span>
+              <div className="min-w-0 flex-1 pt-1.5">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span
+                    className={`text-[15px] font-semibold transition-colors ${
+                      active || done ? "text-foreground" : "text-muted-foreground"
+                    }`}
+                  >
+                    {node.label}
+                  </span>
+                  {active && (
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                      className="inline-flex items-center gap-1 rounded-full bg-brand px-2 py-0.5 text-[10px] font-semibold text-brand-foreground"
+                    >
+                      <User className="h-3 w-3" />
+                      Sneha
+                    </motion.span>
+                  )}
+                </div>
+                <p className="mt-1 text-[13px] leading-snug text-muted-foreground">
+                  {SNEHA[i]}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 }

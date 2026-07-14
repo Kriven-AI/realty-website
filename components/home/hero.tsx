@@ -81,7 +81,7 @@ export function Hero() {
                 New
               </span>
               <span className="text-muted-foreground">
-                Lead Generation is live — we bring leads in too
+                Lead Generation is live
               </span>
               <ArrowRight className="h-3 w-3 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
             </Link>
