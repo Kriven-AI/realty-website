@@ -82,7 +82,7 @@ const VIDEO_OBJECT = {
   description:
     "See how Kriven AI works as the all-in-one AI sales engine for Indian real estate — it answers every call in the buyer's own language, qualifies leads, follows up on WhatsApp, runs outbound calls at scale, and puts every lead in one dashboard.",
   thumbnailUrl: ["https://kriven.ai/kriven-launch-poster.jpg"],
-  uploadDate: "2026-07-17",
+  uploadDate: "2026-07-17T10:00:00+05:30",
   duration: "PT2M43S",
   contentUrl:
     "https://kriven-ai-real-estate-intelligence.s3.us-east-1.amazonaws.com/kriven-launch-v11.mp4",
