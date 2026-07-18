@@ -72,8 +72,30 @@ const SOFTWARE_APPLICATION = {
   publisher: { "@type": "Organization", name: "Kriven AI", url: "https://kriven.ai" },
 };
 
+// The product overview video embedded on the homepage ("Watch a lead become a
+// site visit"). Makes the video eligible for Google video rich results / video
+// search. The contentUrl streams from S3; thumbnailUrl + embedUrl live on kriven.ai.
+const VIDEO_OBJECT = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Kriven AI — Product Overview",
+  description:
+    "See how Kriven AI works as the all-in-one AI sales engine for Indian real estate — it answers every call in the buyer's own language, qualifies leads, follows up on WhatsApp, runs outbound calls at scale, and puts every lead in one dashboard.",
+  thumbnailUrl: ["https://kriven.ai/kriven-launch-poster.jpg"],
+  uploadDate: "2026-07-17",
+  duration: "PT2M43S",
+  contentUrl:
+    "https://kriven-ai-real-estate-intelligence.s3.us-east-1.amazonaws.com/kriven-launch-v11.mp4",
+  embedUrl: "https://kriven.ai/#see-it-in-action",
+  publisher: {
+    "@type": "Organization",
+    name: "Kriven AI",
+    logo: { "@type": "ImageObject", url: "https://kriven.ai/icon.png" },
+  },
+};
+
 export function StructuredData() {
-  const graph = [ORGANIZATION, WEBSITE, SOFTWARE_APPLICATION];
+  const graph = [ORGANIZATION, WEBSITE, SOFTWARE_APPLICATION, VIDEO_OBJECT];
   return (
     <>
       {graph.map((node, i) => (

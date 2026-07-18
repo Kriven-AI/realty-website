@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/hero";
+import { LaunchFilm } from "@/components/home/launch-film";
 import { Integrations } from "@/components/home/integrations";
 import { FragmentedReality } from "@/components/home/fragmented-reality";
 import { LeadEngineTeaser } from "@/components/home/lead-engine-teaser";
@@ -12,9 +13,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Integrations />
+      <LaunchFilm />
       <FragmentedReality />
       <LeadEngineTeaser />
+      <Integrations />
       <PlatformSuite />
       <Personalization />
       <Intelligence />

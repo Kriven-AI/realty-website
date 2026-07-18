@@ -73,16 +73,21 @@ export function Integrations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ delay: 0.05, duration: 0.6, ease }}
-            className="mx-auto mt-4 max-w-2xl text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+            className="mx-auto mt-4 max-w-3xl text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl"
           >
-            Wherever your buyers come from, Kriven AI is already there.
+            <span className="text-foreground">
+              Wherever your buyers come from,
+            </span>{" "}
+            <span className="text-muted-foreground">
+              Kriven AI is already there.
+            </span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ delay: 0.1, duration: 0.6, ease }}
-            className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-muted-foreground"
+            className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground"
           >
             Portals, ads, social, your website, WhatsApp and calls — every lead
             is pulled in, de-duplicated, and worked in one place.
